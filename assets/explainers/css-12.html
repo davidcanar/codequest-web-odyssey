@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Spin &amp; Slide</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Spin & Slide', es: 'Gira y desliza' },
+  scenes: [
+    { type: 'title', emoji: '🌀', dur: 5,
+      title: { en: 'Spin & Slide', es: 'Gira y desliza' },
+      subtitle: { en: 'transition + transform: rotate, scale, translate', es: 'transition + transform: rotate, scale, translate' },
+      chips: [{ en: 'rotate', es: 'rotate' }, { en: 'scale', es: 'scale' }, { en: 'translate', es: 'translate' }, { en: 'transition', es: 'transition' }] },
+
+    { type: 'code', dur: 8,
+      code: '.rocket {\n  transition: transform 0.5s;\n}\n.rocket:hover {\n  transform: translateX(30px);\n}',
+      caption: { en: 'Put <b>transition</b> on the base rule and the new style on <b>:hover</b> — the change glides.',
+                 es: 'Pon <b>transition</b> en la regla base y el nuevo estilo en <b>:hover</b> — el cambio se desliza.' },
+      labels: [
+        { token: 'transition', label: { en: 'makes the change smooth over 0.5s', es: 'suaviza el cambio durante 0.5s' } },
+        { token: ':hover', label: { en: 'when the mouse flies over', es: 'cuando el ratón pasa volando' } },
+        { token: 'translateX(30px)', label: { en: 'slides the rocket 30px to the right', es: 'desliza el cohete 30px a la derecha' } }
+      ] },
+
+    { type: 'transform', dur: 10, emoji: '🚀',
+      frames: [
+        { css: 'rotate(45deg)' },
+        { css: 'scale(1.4)' },
+        { css: 'translateX(40px)' }
+      ],
+      caption: { en: 'transform spins (rotate), grows (scale) and slides (translate) — three moves, one property.',
+                 es: 'transform gira (rotate), crece (scale) y desliza (translate): tres movimientos, una propiedad.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which value makes an element 50% BIGGER?', es: '¿Qué valor hace un elemento 50% MÁS grande?' },
+      options: [{ en: 'rotate(50deg)', es: 'rotate(50deg)' }, { en: 'scale(1.5)', es: 'scale(1.5)' }, { en: 'translate(50px)', es: 'translate(50px)' }],
+      answer: 1,
+      caption: { en: 'scale(1.5) = 150% of the size. Angles go to rotate, distances go to translate.', es: 'scale(1.5) = 150% del tamaño. Los ángulos van con rotate y las distancias con translate.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Slide the rocket 30px right on hover — smoothly', es: 'Desliza el cohete 30px a la derecha al pasar el ratón, suavemente' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

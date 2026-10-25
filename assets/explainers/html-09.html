@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Table the Data</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Table the Data', es: 'Datos en tablas' },
+  scenes: [
+    { type: 'title', emoji: '📊', dur: 5,
+      title: { en: 'Table the Data', es: 'Datos en tablas' },
+      subtitle: { en: 'Rows, header cells and data cells', es: 'Filas, encabezados y celdas' },
+      chips: [{ en: 'table', es: 'table' }, { en: 'tr', es: 'tr' }, { en: 'th', es: 'th' }, { en: 'td', es: 'td' }] },
+
+    { type: 'code', dur: 8,
+      code: '<table>\n  <tr>\n    <th>Cadet</th><th>Role</th>\n  </tr>\n</table>',
+      caption: { en: 'A table is rows of cells. th names the columns.',
+                 es: 'Una tabla son filas de celdas. th nombra las columnas.' },
+      labels: [
+        { token: '<tr>', label: { en: 'one row', es: 'una fila' } },
+        { token: '<th>', label: { en: 'header cell', es: 'celda de encabezado' } },
+        { token: '<td>', label: { en: 'data cell', es: 'celda de datos' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: '<table>\n  <tr><th>Cadet</th><th>Role</th></tr>\n  <tr><td>Cosmo</td><td>Pilot</td></tr>\n</table>',
+      result: '<table style="border-collapse:collapse;font:14px sans-serif"><tr><th style="border:1px solid #888;padding:4px 10px">Cadet</th><th style="border:1px solid #888;padding:4px 10px">Role</th></tr><tr><td style="border:1px solid #888;padding:4px 10px">Cosmo</td><td style="border:1px solid #888;padding:4px 10px">Pilot</td></tr></table>',
+      caption: { en: 'th = bold headers. td = the data beneath.',
+                 es: 'th = encabezados en negrita. td = los datos debajo.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which tag holds a piece of DATA?', es: '¿Qué etiqueta guarda un DATO?' },
+      options: [{ en: '<th>', es: '<th>' }, { en: '<td>', es: '<td>' }, { en: '<tr>', es: '<tr>' }],
+      answer: 1,
+      caption: { en: 'th = table header, td = table data, tr = table row.',
+                 es: 'th = encabezado, td = dato, tr = fila.' } },
+
+    { type: 'code', dur: 7,
+      code: '<tr>\n  <td>Nova</td>\n  <td>Engineer</td>\n</tr>',
+      caption: { en: 'More crew? Just stack more tr lines inside the table.',
+                 es: '¿Más tripulación? Solo apila más líneas tr dentro de la tabla.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build the crew table with headers and two data rows', es: 'Construye la tabla de la tripulación con encabezados y dos filas' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

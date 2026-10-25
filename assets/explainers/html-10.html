@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Talk to Me</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Talk to Me', es: 'Habla conmigo' },
+  scenes: [
+    { type: 'title', emoji: '🧾', dur: 5,
+      title: { en: 'Talk to Me', es: 'Habla conmigo' },
+      subtitle: { en: 'Forms: ask your visitors anything', es: 'Formularios: pregunta a tus visitantes' },
+      chips: [{ en: 'form', es: 'form' }, { en: 'input', es: 'input' }, { en: 'label', es: 'label' }, { en: 'button', es: 'button' }] },
+
+    { type: 'code', dur: 8,
+      code: '<form>\n  <label for="ship">Ship name</label>\n  <input id="ship" type="text">\n  <button>Liftoff</button>\n</form>',
+      caption: { en: 'A form gathers answers. Each field is an input.',
+                 es: 'Un formulario recoge respuestas. Cada campo es un input.' },
+      labels: [
+        { token: 'for + id', label: { en: 'connects label to input', es: 'conecta el label con el input' } },
+        { token: '<input>', label: { en: 'a field visitors type into', es: 'un campo donde el visitante escribe' } },
+        { token: '<button>', label: { en: 'fires the mission', es: 'dispara la misión' } }
+      ] },
+
+    { type: 'steps', dur: 8,
+      frames: [
+        { html: '<div style="font:14px sans-serif">type="text" <input style="padding:4px 8px;border:1px solid #999;border-radius:6px"></div>' },
+        { html: '<div style="font:14px sans-serif">type="number" <input type="number" style="padding:4px 8px;border:1px solid #999;border-radius:6px;width:70px"></div>' },
+        { html: '<div style="font:14px sans-serif">type="email" <input type="email" placeholder="you@space.dev" style="padding:4px 8px;border:1px solid #999;border-radius:6px"></div>' }
+      ],
+      caption: { en: 'One tag, many types: text, number, email…',
+                 es: 'Una etiqueta, muchos tipos: text, number, email…' } },
+
+    { type: 'split', dur: 8,
+      code: '<input type="number" placeholder="Age">',
+      result: '<div style="font:14px sans-serif"><input type="number" placeholder="Age" style="padding:6px 8px;border:1px solid #999;border-radius:6px;width:150px"></div>',
+      caption: { en: 'type changes the keyboard; placeholder hints what to type.',
+                 es: 'type cambia el teclado; placeholder da una pista de qué escribir.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'What connects a label to its input?', es: '¿Qué conecta un label con su input?' },
+      options: [{ en: 'for + id', es: 'for + id' }, { en: 'href + src', es: 'href + src' }, { en: 'alt + title', es: 'alt + title' }],
+      answer: 0,
+      caption: { en: 'for="ship" on the label meets id="ship" on the input.',
+                 es: 'for="ship" en el label se encuentra con id="ship" en el input.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build a Join-the-crew form with label, inputs and a button', es: 'Construye un formulario de reclutamiento con label, inputs y botón' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

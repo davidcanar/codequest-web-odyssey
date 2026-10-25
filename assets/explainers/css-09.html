@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Flexbox I</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Flexbox I', es: 'Flexbox I' },
+  scenes: [
+    { type: 'title', emoji: '🧲', dur: 5,
+      title: { en: 'Flexbox I', es: 'Flexbox I' },
+      subtitle: { en: 'display:flex lines everything up in a row', es: 'display:flex alinea todo en una fila' },
+      chips: [{ en: 'display: flex', es: 'display: flex' }, { en: 'justify-content', es: 'justify-content' }, { en: 'main axis', es: 'eje principal' }] },
+
+    { type: 'code', dur: 8,
+      code: '.menu {\n  display: flex;\n  justify-content: center;\n}',
+      caption: { en: 'One word — <b>flex</b> — turns a container into a flex box and its children into flex items.',
+                 es: 'Una palabra, <b>flex</b>, convierte un contenedor en flex box y a sus hijos en flex items.' },
+      labels: [
+        { token: 'display:', label: { en: 'the switch that picks the layout', es: 'el interruptor que elige el diseño' } },
+        { token: 'flex;', label: { en: 'children line up in a row', es: 'los hijos se alinean en fila' } },
+        { token: 'justify-content:', label: { en: 'slides the row: start, center, spread…', es: 'desliza la fila: inicio, centro, repartidos…' } },
+        { token: 'center;', label: { en: 'the value that centers everything', es: 'el valor que centra todo' } }
+      ] },
+
+    { type: 'flex', dur: 12,
+      frames: [
+        { css: 'justify-content: flex-start', justify: 'flex-start', align: 'center' },
+        { css: 'justify-content: center', justify: 'center', align: 'center' },
+        { css: 'justify-content: space-between', justify: 'space-between', align: 'center' }
+      ],
+      caption: { en: 'justify-content moves the items along the row: packed at the start, centered, or spread edge to edge.',
+                 es: 'justify-content mueve los elementos por la fila: juntos al inicio, centrados o repartidos de borde a borde.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which value pushes the first item left, the last right, with even space between?', es: '¿Qué valor empuja el primer elemento a la izquierda, el último a la derecha, con espacio parejo?' },
+      options: [{ en: 'center', es: 'center' }, { en: 'space-between', es: 'space-between' }, { en: 'flex-end', es: 'flex-end' }],
+      answer: 1,
+      caption: { en: 'space-between pins the ends and shares the leftovers between items.', es: 'space-between fija los extremos y reparte lo sobrante entre los elementos.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Make the toolbar a flex row and center the buttons', es: 'Haz de la barra una fila flex y centra los botones' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Width, Height &amp; Units</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Width, Height & Units', es: 'Ancho, alto y unidades' },
+  scenes: [
+    { type: 'title', emoji: '📏', dur: 5,
+      title: { en: 'Width, Height & Units', es: 'Ancho, alto y unidades' },
+      subtitle: { en: 'px, %, em and rem', es: 'px, %, em y rem' },
+      chips: [{ en: 'px', es: 'px' }, { en: '%', es: '%' }, { en: 'em', es: 'em' }, { en: 'rem', es: 'rem' }] },
+
+    { type: 'code', dur: 7,
+      code: '.panel {\n  width: 320px;\n  height: 180px;\n}',
+      caption: { en: 'Pixels are fixed: 320px is 320px, on every screen in the galaxy.',
+                es: 'Los píxeles son fijos: 320px son 320px, en cualquier pantalla de la galaxia.' },
+      labels: [
+        { token: '320px', label: { en: 'fixed width — never flexes', es: 'ancho fijo: nunca se flexiona' } },
+        { token: '180px', label: { en: 'fixed height', es: 'alto fijo' } }
+      ] },
+
+    { type: 'code', dur: 8,
+      code: '.panel { width: 80%;      }\n.big   { font-size: 2rem;   }\n.small { font-size: 0.75em; }',
+      caption: { en: '% follows the parent. rem follows the root. em follows the element.',
+                es: '% sigue al padre. rem sigue a la raíz. em sigue al elemento.' } },
+
+    { type: 'split', dur: 8,
+      code: '.panel {\n  width: 50%;\n}',
+      result: '<div style="width:50%;border:2px solid #7c6cff;padding:10px;color:#eaf0ff;border-radius:6px;font-size:.95em">Half of my parent — I flex with it</div>',
+      caption: { en: '50% stretches and shrinks with the parent — flexible layouts.',
+                 es: '50% se estira y se encoge con el padre: diseños flexibles.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Root font is 16px. How big is font-size: 2rem?', es: 'La fuente raíz mide 16px. ¿Qué tamaño tiene font-size: 2rem?' },
+      options: [{ en: '16px', es: '16px' }, { en: '2px', es: '2px' }, { en: '32px', es: '32px' }],
+      answer: 2,
+      caption: { en: 'rem = root em. 2 × 16 = 32px, always.', es: 'rem = root em. 2 × 16 = 32px, siempre.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Size the cargo panel in px, rem and em', es: 'Mide el panel de carga en px, rem y em' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

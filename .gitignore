@@ -1,0 +1,8 @@
+node_modules/
+tools/tmp/
+tools/.remote.json
+tools/.remote-state.json
+*.log
+.zcode/
+tools/tmp-*.tgz
+tools/frame_*.jpg

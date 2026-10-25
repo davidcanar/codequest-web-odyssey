@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Variable Cargo</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Variable Cargo', es: 'Carga de variables' },
+  scenes: [
+    { type: 'title', emoji: '🏷️', dur: 5,
+      title: { en: 'Variable Cargo', es: 'Carga de variables' },
+      subtitle: { en: 'Labeled boxes for your data', es: 'Cajas etiquetadas para tus datos' },
+      chips: [{ en: 'let', es: 'let' }, { en: 'const', es: 'const' }, { en: 'number', es: 'number' }, { en: 'string', es: 'string' }, { en: 'boolean', es: 'boolean' }] },
+
+    { type: 'code', dur: 9,
+      code: "let fuel = 90;\nconst pilot = 'Cosmo';",
+      caption: { en: 'let creates a box that can change; const creates one locked forever.',
+                 es: 'let crea una caja que puede cambiar; const crea una cerrada para siempre.' },
+      labels: [
+        { token: 'let fuel = 90', label: { en: 'a number — no quotes', es: 'un número: sin comillas' } },
+        { token: "const pilot = 'Cosmo'", label: { en: 'a string — text in quotes, never changes', es: 'un string: texto entre comillas, nunca cambia' } },
+        { token: '=', label: { en: 'assignment — put the value in the box', es: 'asignación: mete el valor en la caja' } }
+      ] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: 'let fuel = 90;' },
+        { t: 'fuel = 95;' },
+        { t: 'fuel' }, { t: '95', out: true },
+        { t: 'console.log(fuel);' }, { t: '95', out: true }
+      ],
+      caption: { en: 'A let box can be refilled: fuel jumps from 90 to 95.', es: 'Una caja let se puede rellenar: fuel salta de 90 a 95.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which variable can NEVER change?', es: '¿Qué variable NUNCA puede cambiar?' },
+      options: [{ en: 'let', es: 'let' }, { en: 'const', es: 'const' }, { en: 'both', es: 'ambas' }],
+      answer: 1,
+      caption: { en: 'const = constant. Once filled, sealed shut.', es: 'const = constante. Una vez llena, queda sellada.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Pack a number, a string and a boolean in the training deck', es: 'Empaca un número, un string y un booleano en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

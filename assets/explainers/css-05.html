@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Box Model II</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Box Model II', es: 'Modelo de caja II' },
+  scenes: [
+    { type: 'title', emoji: '↔️', dur: 5,
+      title: { en: 'Box Model II', es: 'Modelo de caja II' },
+      subtitle: { en: 'margin, centering and box-sizing', es: 'margin, centrado y box-sizing' },
+      chips: [{ en: 'margin', es: 'margin' }, { en: 'auto', es: 'auto' }, { en: 'box-sizing', es: 'box-sizing' }] },
+
+    { type: 'boxmodel', dur: 8,
+      focus: ['content', 'margin'],
+      text: 'Personal space',
+      caption: { en: '<b>margin</b> is the empty space OUTSIDE the border — between boxes.',
+                 es: 'El <b>margin</b> es el espacio vacío FUERA del borde: entre cajas.' } },
+
+    { type: 'code', dur: 8,
+      code: '.hero {\n  width: 300px;\n  margin: 0 auto;\n}',
+      caption: { en: 'width + margin: 0 auto — the free space splits evenly and the box centers.',
+                es: 'width + margin: 0 auto — el espacio libre se reparte y la caja se centra.' },
+      labels: [
+        { token: '0', label: { en: 'no space above or below', es: 'sin espacio arriba o abajo' } },
+        { token: 'auto', label: { en: 'the browser splits the sides evenly', es: 'el navegador reparte los lados por igual' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: '.box {\n  box-sizing: border-box;\n  width: 200px;\n  padding: 16px;\n}',
+      result: '<div style="box-sizing:border-box;width:200px;padding:16px;border:2px dashed #38e0d8;color:#eaf0ff;font-size:.95em;border-radius:6px">200px total — padding included, no growth</div>',
+      caption: { en: 'border-box: the width you write is the TOTAL. No math surprises.',
+                 es: 'border-box: el ancho que escribes es el TOTAL. Sin sorpresas matemáticas.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'margin: auto centers a box only if the box has…', es: 'margin: auto centra una caja solo si la caja tiene…' },
+      options: [{ en: 'a border', es: 'un borde' }, { en: 'a width', es: 'un ancho' }, { en: 'a shadow', es: 'una sombra' }],
+      answer: 1,
+      caption: { en: 'A width leaves free space — auto splits that space left and right.', es: 'Un ancho deja espacio libre: auto lo reparte entre izquierda y derecha.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Center the hero and tame the cargo boxes', es: 'Centra el hero y doma las cajas de carga' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

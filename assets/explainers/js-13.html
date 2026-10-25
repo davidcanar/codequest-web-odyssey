@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Finding Elements</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Finding Elements', es: 'Encontrar elementos' },
+  scenes: [
+    { type: 'title', emoji: '🔭', dur: 5,
+      title: { en: 'Finding Elements', es: 'Encontrar elementos' },
+      subtitle: { en: 'querySelector — a tractor beam for the DOM', es: 'querySelector: un rayo tractor para el DOM' },
+      chips: [{ en: 'querySelector', es: 'querySelector' }, { en: 'id', es: 'id' }, { en: 'class', es: 'clase' }] },
+
+    { type: 'tree', dur: 9,
+      data: { tag: 'body', kids: [
+        { tag: 'h1 id="banner"', hot: true },
+        { tag: 'p class="status"' },
+        { tag: 'ul', kids: [ { tag: 'li' }, { tag: 'li' }, { tag: 'li' } ] }
+      ] },
+      caption: { en: 'The DOM is a family tree of elements. querySelector walks it to find your target.',
+                 es: 'El DOM es un árbol de elementos. querySelector lo recorre hasta tu objetivo.' } },
+
+    { type: 'code', dur: 8,
+      code: "const banner = document.querySelector('#banner');\nconst items = document.querySelectorAll('li');",
+      caption: { en: 'querySelector finds the FIRST match; querySelectorAll finds ALL of them.',
+                 es: 'querySelector encuentra la PRIMERA coincidencia; querySelectorAll las encuentra TODAS.' },
+      labels: [
+        { token: "querySelector", label: { en: 'one element', es: 'un elemento' } },
+        { token: "querySelectorAll", label: { en: 'a list of elements', es: 'una lista de elementos' } },
+        { token: "'#banner'", label: { en: 'the # means: search by id', es: 'el # significa: busca por id' } }
+      ] },
+
+    { type: 'console', dur: 7,
+      lines: [
+        { t: "document.querySelector('#banner').textContent" },
+        { t: '"Mission Control"', out: true },
+        { t: "document.querySelectorAll('li').length" },
+        { t: '3', out: true }
+      ],
+      caption: { en: 'Once found, the element hands you its text, styles and more.',
+                 es: 'Una vez encontrado, el elemento te da su texto, sus estilos y más.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: "Which selector finds every element with class 'status'?", es: "¿Qué selector encuentra todos los elementos con clase 'status'?" },
+      options: [{ en: "'.status'", es: "'.status'" }, { en: "'#status'", es: "'#status'" }, { en: "'status'", es: "'status'" }],
+      answer: 0,
+      caption: { en: 'A dot selects classes, a hash selects ids.', es: 'El punto selecciona clases, el hash selecciona ids.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Scan the station and select banner, statuses and planets', es: 'Escanea la estación y selecciona banner, statuses y planets' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

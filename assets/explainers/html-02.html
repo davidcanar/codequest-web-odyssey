@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Anatomy of a Tag</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Anatomy of a Tag', es: 'Anatomía de una etiqueta' },
+  scenes: [
+    { type: 'title', emoji: '🧩', dur: 5,
+      title: { en: 'Anatomy of a Tag', es: 'Anatomía de una etiqueta' },
+      subtitle: { en: 'Opening tags, closing tags and attributes', es: 'Etiquetas de apertura, cierre y atributos' },
+      chips: [{ en: 'tags', es: 'etiquetas' }, { en: 'attributes', es: 'atributos' }, { en: 'content', es: 'contenido' }] },
+
+    { type: 'code', dur: 9,
+      code: '<a href="https://cosmo.space">Fly with Cosmo</a>',
+      caption: { en: 'A link element. The <b>href</b> attribute is extra information that lives inside the opening tag.',
+                 es: 'Un elemento de enlace. El atributo <b>href</b> es información extra que vive dentro de la etiqueta de apertura.' },
+      labels: [
+        { token: '<a>', label: { en: 'opening tag', es: 'etiqueta de apertura' } },
+        { token: 'href="..."', label: { en: 'attribute = name + value', es: 'atributo = nombre + valor' } },
+        { token: 'Fly with Cosmo', label: { en: 'content — the clickable text', es: 'contenido — el texto clicable' } },
+        { token: '</a>', label: { en: 'closing tag — note the slash', es: 'etiqueta de cierre — fíjate en la barra' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: '<img src="rocket.png" alt="A rocket">\n<a href="mailto:cosmo@space.dev">Mail me</a>',
+      result: '<p style="font-family:monospace">🖼️ rocket.png<br>✉️ <span style="color:#1a73e8;text-decoration:underline">Mail me</span></p>',
+      caption: { en: 'Attributes configure elements: src loads the file, alt describes it for screen readers, mailto: opens the mail app.',
+                 es: 'Los atributos configuran elementos: src carga el archivo, alt lo describe para lectores de pantalla, mailto: abre el correo.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Where do attributes ALWAYS live?', es: '¿Dónde viven SIEMPRE los atributos?' },
+      options: [{ en: 'Inside the opening tag', es: 'Dentro de la etiqueta de apertura' }, { en: 'Inside the content', es: 'Dentro del contenido' }, { en: 'Inside the closing tag', es: 'Dentro de la etiqueta de cierre' }],
+      answer: 0,
+      caption: { en: 'Opening tag = the control panel of the element. Closing tags never carry attributes.', es: 'La etiqueta de apertura es el panel de control. Las de cierre nunca llevan atributos.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build a link with an href attribute in the training deck', es: 'Construye un enlace con atributo href en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

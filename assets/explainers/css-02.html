@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Paint with Colors</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Paint with Colors', es: 'Pinta con colores' },
+  scenes: [
+    { type: 'title', emoji: '🌈', dur: 5,
+      title: { en: 'Paint with Colors', es: 'Pinta con colores' },
+      subtitle: { en: 'color, background-color — names, hex and rgb', es: 'color y background-color: nombres, hex y rgb' },
+      chips: [{ en: 'color', es: 'color' }, { en: 'background-color', es: 'background-color' }, { en: 'hex', es: 'hex' }, { en: 'rgb', es: 'rgb' }] },
+
+    { type: 'code', dur: 8,
+      code: 'p {\n  color: tomato;\n  background-color: navy;\n}',
+      caption: { en: '<b>color</b> paints the letters; <b>background-color</b> paints behind them.',
+                es: '<b>color</b> pinta las letras; <b>background-color</b> pinta detrás de ellas.' },
+      labels: [
+        { token: 'color:', label: { en: 'the letters themselves', es: 'las letras mismas' } },
+        { token: 'background-color:', label: { en: 'the area behind the text', es: 'el área detrás del texto' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: '.alert {\n  color: #ff0000;\n  background-color: navy;\n}',
+      result: '<p style="color:#ff5e7a;background:#000080;padding:6px 10px;border-radius:4px;margin:.2em;font-family:monospace">Meteor shower tonight!</p>',
+      caption: { en: 'A dot targets a class. Hex #ff0000 is red — ff means 255.',
+                 es: 'Un punto apunta a una clase. El hex #ff0000 es rojo: ff significa 255.' } },
+
+    { type: 'code', dur: 6,
+      code: '/* three spellings of one red */\ncolor: red;\ncolor: #ff0000;\ncolor: rgb(255, 0, 0);',
+      caption: { en: 'Names, hex and rgb — three spellings, one color.',
+                 es: 'Nombres, hex y rgb: tres escrituras, un solo color.' } },
+
+    { type: 'quiz', dur: 8,
+      question: { en: 'What color is rgb(0, 128, 0)?', es: '¿Qué color es rgb(0, 128, 0)?' },
+      options: [{ en: 'red', es: 'rojo' }, { en: 'green', es: 'verde' }, { en: 'blue', es: 'azul' }],
+      answer: 1,
+      caption: { en: '0 red, 128 green, 0 blue — the named color green.', es: '0 rojo, 128 verde, 0 azul: el color llamado green.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Paint the banner and the alert in the training deck', es: 'Pinta el banner y la alerta en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

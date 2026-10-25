@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>BOSS: Station Card</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'BOSS: Station Card', es: 'JEFE: Tarjeta de la estación' },
+  scenes: [
+    { type: 'title', emoji: '🏆', dur: 5,
+      title: { en: 'BOSS: Station Card', es: 'JEFE: Tarjeta de la estación' },
+      subtitle: { en: 'The final mission of the CSS Kingdom', es: 'La misión final del Reino CSS' },
+      chips: [{ en: 'colors', es: 'colores' }, { en: 'padding', es: 'padding' }, { en: 'flex', es: 'flex' }, { en: 'shadow', es: 'sombra' }] },
+
+    { type: 'code', dur: 8,
+      code: '.card {\n  background-color: navy;\n  padding: 20px;\n  border-radius: 16px;\n  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);\n}',
+      caption: { en: 'The boss card needs everything at once: paint, breathing room, rounded corners and a lift.',
+                 es: 'La tarjeta del jefe lo necesita todo a la vez: pintura, aire, esquinas redondeadas y elevación.' },
+      labels: [
+        { token: 'background-color', label: { en: 'the card\'s paint', es: 'la pintura de la tarjeta' } },
+        { token: 'padding', label: { en: 'breathing room inside', es: 'aire dentro de la tarjeta' } },
+        { token: 'border-radius', label: { en: 'rounded corners', es: 'esquinas redondeadas' } },
+        { token: 'box-shadow', label: { en: 'lifts the card off the page', es: 'eleva la tarjeta de la página' } }
+      ] },
+
+    { type: 'flex', dur: 8,
+      frames: [
+        { css: 'display: flex; align-items: center', justify: 'flex-start', align: 'center' }
+      ],
+      caption: { en: 'The card header: avatar and name side by side, aligned on the center line.',
+                 es: 'El encabezado de la tarjeta: avatar y nombre lado a lado, alineados en el centro.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which value makes the avatar perfectly ROUND?', es: '¿Qué valor hace que el avatar quede perfectamente REDONDO?' },
+      options: [{ en: 'border-radius: 50%', es: 'border-radius: 50%' }, { en: 'border: round;', es: 'border: round;' }, { en: 'circle: yes;', es: 'circle: yes;' }],
+      answer: 0,
+      caption: { en: 'border-radius: 50% bends every corner halfway — any square becomes a circle.', es: 'border-radius: 50% dobla cada esquina hasta la mitad: cualquier cuadrado se vuelve un círculo.' } },
+
+    { type: 'steps', dur: 8,
+      frames: [
+        { html: '<div style="max-width:340px;margin:auto;background:#d9dcf0;color:#222;border-radius:4px;padding:14px"><b>Cosmo</b>' +
+            '<p style="margin:6px 0">Robot guide.</p>' +
+            '<ul style="margin:6px 0 0 18px"><li>Flexbox pilot</li><li>Grid navigator</li></ul></div>', css: '' },
+        { html: '<div style="max-width:340px;margin:auto;background:navy;color:#dbe4ff;border-radius:16px;padding:20px;box-shadow:0 8px 20px rgba(0,0,0,.45)">' +
+            '<div style="display:flex;align-items:center;gap:10px"><span style="width:44px;height:44px;border-radius:50%;background:#ffd75e;display:inline-flex;align-items:center;justify-content:center">🤖</span><b style="color:#ffd75e">Cosmo</b></div>' +
+            '<p style="margin:10px 0 6px">Robot guide of the CSS Kingdom.</p>' +
+            '<ul style="display:flex;gap:10px;list-style:none;margin:0;padding:0"><li style="background:#1c2a6b;border-radius:6px;padding:4px 8px">Flexbox pilot</li><li style="background:#1c2a6b;border-radius:6px;padding:4px 8px">Grid navigator</li></ul></div>', css: '' }
+      ],
+      caption: { en: 'From a plain box to the station ID card — every level you trained returns here.',
+                 es: 'De una caja simple a la tarjeta de la estación: aquí vuelve todo lo que entrenaste.' } },
+
+    { type: 'title', emoji: '⚔️', dur: 5,
+      title: { en: 'Your turn — BOSS FIGHT!', es: '¡Tu turno — PELEA DE JEFE!' },
+      subtitle: { en: 'Style the whole station ID card in the training deck', es: 'Estiliza toda la tarjeta de la estación en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

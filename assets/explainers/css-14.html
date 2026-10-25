@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Responsive Pages</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Responsive Pages', es: 'Páginas responsivas' },
+  scenes: [
+    { type: 'title', emoji: '📱', dur: 5,
+      title: { en: 'Responsive Pages', es: 'Páginas responsivas' },
+      subtitle: { en: 'Media queries: one page, every screen', es: 'Media queries: una página, todas las pantallas' },
+      chips: [{ en: '@media', es: '@media' }, { en: 'max-width', es: 'max-width' }, { en: 'breakpoint', es: 'punto de quiebre' }] },
+
+    { type: 'code', dur: 9,
+      code: '@media (max-width: 600px) {\n  .menu { flex-direction: column; }\n  .panel { width: 100%; }\n}',
+      caption: { en: 'A media query wraps normal CSS in a condition about the screen. Condition true? Styles apply.',
+                 es: 'Una media query envuelve CSS normal en una condición sobre la pantalla. ¿Se cumple? Se aplican.' },
+      labels: [
+        { token: '@media', label: { en: '"only when…" — the media query opener', es: '"solo cuando…" — el abre la media query' } },
+        { token: '(max-width: 600px)', label: { en: 'the screen is 600px or narrower', es: 'la pantalla mide 600px o menos' } },
+        { token: 'inside { }', label: { en: 'styles just for small screens', es: 'estilos solo para pantallas pequeñas' } }
+      ] },
+
+    { type: 'steps', dur: 10,
+      frames: [
+        { html: '<div style="max-width:520px;margin:auto">' +
+            '<nav style="display:flex;justify-content:space-around;background:#1c2a6b;border-radius:8px;padding:8px;margin-bottom:10px"><span>🏠</span><span>🚀</span><span>🛰️</span></nav>' +
+            '<div style="width:80%;margin:auto;background:#101743;border:1px solid #4a5fd0;border-radius:8px;padding:12px;text-align:center">📰 Station news</div>' +
+            '<div style="text-align:center;margin-top:8px;color:#8fa3ff">🖥️ wide screen</div></div>', css: '' },
+        { html: '<div style="max-width:300px;margin:auto">' +
+            '<nav style="display:flex;flex-direction:column;gap:6px;background:#1c2a6b;border-radius:8px;padding:8px;margin-bottom:10px;text-align:center"><span>🏠</span><span>🚀</span><span>🛰️</span></nav>' +
+            '<div style="width:100%;background:#101743;border:1px solid #4a5fd0;border-radius:8px;padding:12px;text-align:center">📰 Station news</div>' +
+            '<div style="text-align:center;margin-top:8px;color:#8fa3ff">📱 narrow screen</div></div>', css: '' }
+      ],
+      caption: { en: 'Same HTML, different CSS — the page adapts the moment the screen shrinks.',
+                 es: 'El mismo HTML, distinto CSS: la página se adapta en cuanto la pantalla se achica.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'The styles inside @media (max-width: 600px) apply when…', es: 'Los estilos de @media (max-width: 600px) se aplican cuando…' },
+      options: [{ en: 'the screen is 600px or narrower', es: 'la pantalla mide 600px o menos' }, { en: 'the screen is wider than 600px', es: 'la pantalla mide más de 600px' }, { en: 'the page is 600 words long', es: 'la página tiene 600 palabras' }],
+      answer: 0,
+      caption: { en: 'max-width sets the upper limit: 600px and anything below it.', es: 'max-width pone el límite superior: 600px y todo lo que esté por debajo.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Stack the menu and widen the panel below 600px', es: 'Apila el menú y ensancha el panel por debajo de 600px' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

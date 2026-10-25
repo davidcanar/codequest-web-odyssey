@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Strong &amp; Emphasis</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Strong & Emphasis', es: 'Importancia y énfasis' },
+  scenes: [
+    { type: 'title', emoji: '✨', dur: 5,
+      title: { en: 'Strong & Emphasis', es: 'Importancia y énfasis' },
+      subtitle: { en: 'Words with weight', es: 'Palabras con peso' },
+      chips: [{ en: 'strong', es: 'strong' }, { en: 'em', es: 'em' }, { en: 'meaning', es: 'significado' }] },
+
+    { type: 'code', dur: 8,
+      code: { en: '<p>This is <strong>very important</strong>.</p>\n<p>Read this <em>slowly</em>.</p>',
+              es: '<p>Esto es <strong>muy importante</strong>.</p>\n<p>Lee esto <em>despacio</em>.</p>' },
+      caption: { en: 'strong = importance (renders bold). em = gentle stress (renders italic).',
+                 es: 'strong = importancia (se ve en negrita). em = énfasis suave (se ve en cursiva).' },
+      labels: [
+        { token: '<strong>', label: { en: 'important — screen readers shout it', es: 'importante — los lectores lo gritan' } },
+        { token: '<em>', label: { en: 'emphasis — a softer accent', es: 'énfasis — un acento más suave' } }
+      ] },
+
+    { type: 'split', dur: 7,
+      code: '<p><strong>Red alert</strong>: launch <em>now</em>!</p>',
+      result: '<p style="font:16px sans-serif;margin:0"><strong>Red alert</strong>: launch <em>now</em>!</p>',
+      caption: { en: 'The browser renders strong as bold and em as italic.',
+                 es: 'El navegador dibuja strong como negrita y em como cursiva.' } },
+
+    { type: 'steps', dur: 7,
+      frames: [
+        { html: '<p style="font:16px sans-serif;margin:0">Just looks bold: <b>B</b></p>' },
+        { html: '<p style="font:16px sans-serif;margin:0">Means it: <strong>strong!</strong></p>' }
+      ],
+      caption: { en: 'b only changes looks. strong tells machines what matters.',
+                 es: 'b solo cambia la apariencia. strong les dice a las máquinas qué importa.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which pair carries MEANING, not just style?', es: '¿Qué par lleva SIGNIFICADO, no solo estilo?' },
+      options: [{ en: '<b> and <i>', es: '<b> y <i>' }, { en: '<strong> and <em>', es: '<strong> y <em>' }, { en: '<u> and <s>', es: '<u> y <s>' }],
+      answer: 1,
+      caption: { en: 'Screen readers and search engines understand strong and em.',
+                 es: 'Los lectores de pantalla y los buscadores entienden strong y em.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Shout one warning with strong and whisper one word with em', es: 'Grita una advertencia con strong y susurra una palabra con em' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>BOSS: Your Profile Page</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'BOSS: Your Profile Page', es: 'JEFE: Tu página de perfil' },
+  scenes: [
+    { type: 'title', emoji: '🏆', dur: 5,
+      title: { en: 'BOSS: Your Profile Page', es: 'JEFE: Tu página de perfil' },
+      subtitle: { en: 'One final mission to graduate', es: 'Una misión final para graduarte' },
+      chips: [{ en: 'h1', es: 'h1' }, { en: 'img', es: 'img' }, { en: 'ul', es: 'ul' }, { en: 'a', es: 'a' }] },
+
+    { type: 'code', dur: 8,
+      code: { en: '<h1>Cadet Cosmo</h1>\n<img src="cosmo.png" alt="Cosmo">\n<p>I love the nebula.</p>',
+              es: '<h1>Cadete Cosmo</h1>\n<img src="cosmo.png" alt="Cosmo">\n<p>Me encanta la nebulosa.</p>' },
+      caption: { en: 'Every profile starts with a title, a picture and a bio.',
+                 es: 'Todo perfil empieza con un título, una imagen y una biografía.' } },
+
+    { type: 'code', dur: 8,
+      code: '<ul>\n  <li>Stargazing</li>\n  <li>Rockets</li>\n</ul>\n<a href="mailto:cosmo@space.dev">Email me</a>',
+      caption: { en: 'Hobbies live in a list. Contact with a mailto link.',
+                 es: 'Los pasatiempos viven en una lista. Contacto con un enlace mailto.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which attribute must describe the profile photo?', es: '¿Qué atributo debe describir la foto de perfil?' },
+      options: [{ en: 'src', es: 'src' }, { en: 'width', es: 'width' }, { en: 'alt', es: 'alt' }],
+      answer: 2,
+      caption: { en: 'alt text makes your profile accessible to everyone.',
+                 es: 'El texto alt hace tu perfil accesible para todos.' } },
+
+    { type: 'tree', dur: 7,
+      data: { tag: 'body', kids: [ { tag: 'h1' }, { tag: 'img' }, { tag: 'p' }, { tag: 'ul' }, { tag: 'a' } ] },
+      caption: { en: 'Your page map: five elements, one hero.',
+                 es: 'El mapa de tu página: cinco elementos, un héroe.' } },
+
+    { type: 'title', emoji: '🚀', dur: 5,
+      title: { en: 'Final mission, Cadet!', es: '¡Misión final, Cadete!' },
+      subtitle: { en: 'Build the complete profile page — the nebula is watching!', es: 'Construye la página de perfil completa: ¡la nebulosa te observa!' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Grid Layout</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Grid Layout', es: 'Diseño con Grid' },
+  scenes: [
+    { type: 'title', emoji: '🔲', dur: 5,
+      title: { en: 'Grid Layout', es: 'Diseño con Grid' },
+      subtitle: { en: 'display:grid — rows AND columns at once', es: 'display:grid — filas Y columnas a la vez' },
+      chips: [{ en: 'display: grid', es: 'display: grid' }, { en: 'grid-template-columns', es: 'grid-template-columns' }, { en: '1fr', es: '1fr' }] },
+
+    { type: 'code', dur: 9,
+      code: '.gallery {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 16px;\n}',
+      caption: { en: 'Grid is two-dimensional: <b>grid-template-columns</b> draws one track per column.',
+                 es: 'Grid es bidimensional: <b>grid-template-columns</b> dibuja una pista por columna.' },
+      labels: [
+        { token: 'display: grid', label: { en: 'switches on the grid', es: 'activa la cuadrícula' } },
+        { token: 'repeat(3, 1fr)', label: { en: 'three equal columns in one go', es: 'tres columnas iguales de una vez' } },
+        { token: '1fr', label: { en: 'one equal share of the free space', es: 'una parte igual del espacio libre' } },
+        { token: 'gap: 16px', label: { en: 'space between rows and columns', es: 'espacio entre filas y columnas' } }
+      ] },
+
+    { type: 'steps', dur: 10,
+      frames: [
+        { html: '<div style="max-width:420px;margin:auto">' +
+            '<div style="margin:6px 0;background:#1c2a6b;border:1px solid #4a5fd0;border-radius:8px;padding:10px;text-align:center;font-size:1.5em">🚀</div>' +
+            '<div style="margin:6px 0;background:#1c2a6b;border:1px solid #4a5fd0;border-radius:8px;padding:10px;text-align:center;font-size:1.5em">🛰️</div>' +
+            '<div style="margin:6px 0;background:#1c2a6b;border:1px solid #4a5fd0;border-radius:8px;padding:10px;text-align:center;font-size:1.5em">🌕</div>' +
+            '</div>', css: '' },
+        { html: '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:420px;margin:auto">' +
+            '<div style="background:#1c2a6b;border:1px solid #4a5fd0;border-radius:8px;padding:14px;text-align:center;font-size:1.5em">🚀</div>' +
+            '<div style="background:#1c2a6b;border:1px solid #4a5fd0;border-radius:8px;padding:14px;text-align:center;font-size:1.5em">🛰️</div>' +
+            '<div style="background:#1c2a6b;border:1px solid #4a5fd0;border-radius:8px;padding:14px;text-align:center;font-size:1.5em">🌕</div>' +
+            '<div style="background:#1c2a6b;border:1px solid #4a5fd0;border-radius:8px;padding:14px;text-align:center;font-size:1.5em">☄️</div>' +
+            '<div style="background:#1c2a6b;border:1px solid #4a5fd0;border-radius:8px;padding:14px;text-align:center;font-size:1.5em">🌌</div>' +
+            '<div style="background:#1c2a6b;border:1px solid #4a5fd0;border-radius:8px;padding:14px;text-align:center;font-size:1.5em">🪐</div>' +
+            '</div>', css: '' }
+      ],
+      caption: { en: 'One rule snaps the tiles into a tidy three-column grid — extra tiles wrap to the next row.',
+                 es: 'Una sola regla ordena las fichas en una cuadrícula de tres columnas: las demás pasan a la siguiente fila.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'What does 1fr mean?', es: '¿Qué significa 1fr?' },
+      options: [{ en: 'one pixel', es: 'un píxel' }, { en: 'one equal share of the free space', es: 'una parte igual del espacio libre' }, { en: 'one frame per second', es: 'un fotograma por segundo' }],
+      answer: 1,
+      caption: { en: '1fr 1fr 1fr splits the row into three equal shares — repeat(3, 1fr) is the shortcut.', es: '1fr 1fr 1fr divide la fila en tres partes iguales: repeat(3, 1fr) es el atajo.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build the patch gallery: a grid of three equal columns with gaps', es: 'Construye la galería de parches: cuadrícula de tres columnas iguales con gap' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

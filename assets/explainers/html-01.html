@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Your First Page</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Your First Page', es: 'Tu primera página' },
+  scenes: [
+    { type: 'title', emoji: '📄', dur: 5,
+      title: { en: 'Your First Page', es: 'Tu primera página' },
+      subtitle: { en: 'HTML is the skeleton of every website', es: 'HTML es el esqueleto de todos los sitios web' },
+      chips: [{ en: 'HTML', es: 'HTML' }, { en: 'tags', es: 'etiquetas' }, { en: 'headings', es: 'encabezados' }] },
+
+    { type: 'code', dur: 9,
+      code: { en: '<h1>Hello, universe!</h1>', es: '<h1>¡Hola, universo!</h1>' },
+      caption: { en: 'HTML is made of tags. This one is an <b>h1</b> — a big heading.',
+                es: 'HTML está hecho de etiquetas. Esta es un <b>h1</b> — un encabezado grande.' },
+      labels: [
+        { token: '<h1>', label: { en: 'opening tag — "start a big heading"', es: 'etiqueta de apertura — "empieza un encabezado grande"' } },
+        { token: 'Hello, universe!', label: { en: 'content — what the user sees', es: 'contenido — lo que el usuario ve' } },
+        { token: '</h1>', label: { en: 'closing tag — the slash means "end"', es: 'etiqueta de cierre — la barra significa "fin"' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: { en: '<h1>My Space Page</h1>\n<h2>Episode 1</h2>', es: '<h1>My Space Page</h1>\n<h2>Episode 1</h2>' },
+      result: '<h1 style="font-size:2em;margin:0">My Space Page</h1><h2 style="margin:.3em 0 0;color:#555">Episode 1</h2>',
+      caption: { en: 'The browser reads the tags and renders the page. h1 is big, h2 is smaller.',
+                 es: 'El navegador lee las etiquetas y dibuja la página. h1 es grande, h2 más pequeño.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which tag makes the BIGGEST heading?', es: '¿Qué etiqueta crea el encabezado MÁS grande?' },
+      options: [{ en: '<h6>', es: '<h6>' }, { en: '<h1>', es: '<h1>' }, { en: '<p>', es: '<p>' }],
+      answer: 1,
+      caption: { en: 'h1 = heading 1 (biggest) … h6 = heading 6 (smallest).', es: 'h1 = encabezado 1 (el más grande) … h6 = encabezado 6 (el más pequeño).' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build a page with an h1 and an h2 in the training deck', es: 'Construye una página con un h1 y un h2 en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>List It All</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'List It All', es: 'Todo en listas' },
+  scenes: [
+    { type: 'title', emoji: '📋', dur: 5,
+      title: { en: 'List It All', es: 'Todo en listas' },
+      subtitle: { en: 'Bullets, numbers and nesting', es: 'Viñetas, números y anidación' },
+      chips: [{ en: 'ul', es: 'ul' }, { en: 'ol', es: 'ol' }, { en: 'li', es: 'li' }] },
+
+    { type: 'code', dur: 8,
+      code: '<ul>\n  <li>Moon cookies</li>\n  <li>Star juice</li>\n</ul>',
+      caption: { en: 'ul = unordered list: bullet points. Each item is an li.',
+                 es: 'ul = lista sin orden: viñetas. Cada elemento es un li.' },
+      labels: [
+        { token: '<ul>', label: { en: 'the list container', es: 'el contenedor de la lista' } },
+        { token: '<li>', label: { en: 'one item', es: 'un elemento' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: '<ol>\n  <li>Suit up</li>\n  <li>Countdown</li>\n</ol>',
+      result: '<ol style="margin:0;font:15px sans-serif"><li>Suit up</li><li>Countdown</li></ol>',
+      caption: { en: 'ol numbers its items automatically — perfect for checklists.',
+                 es: 'ol numera sus elementos automáticamente: perfecta para listas de pasos.' } },
+
+    { type: 'code', dur: 7,
+      code: '<ul>\n  <li>Backpack\n    <ul>\n      <li>Rope</li>\n    </ul>\n  </li>\n</ul>',
+      caption: { en: 'A whole new list can live inside one li — nesting!',
+                 es: '¡Una lista nueva puede vivir dentro de un li: anidación!' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which list numbers its items?', es: '¿Qué lista numera sus elementos?' },
+      options: [{ en: '<ul>', es: '<ul>' }, { en: '<ol>', es: '<ol>' }, { en: '<li>', es: '<li>' }],
+      answer: 1,
+      caption: { en: 'ol = ordered (1, 2, 3). ul = unordered (bullets).',
+                 es: 'ol = ordenada (1, 2, 3). ul = sin orden (viñetas).' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build a launch checklist with a nested list inside', es: 'Construye una lista de despegue con una lista anidada dentro' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

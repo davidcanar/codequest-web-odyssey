@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Boss: Click Counter</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Boss: Click Counter', es: 'Jefe: Contador de clics' },
+  scenes: [
+    { type: 'title', emoji: '🕹️', dur: 5,
+      title: { en: 'Boss: Click Counter', es: 'Jefe: Contador de clics' },
+      subtitle: { en: 'State + handlers + listeners = a real mini app', es: 'Estado + manejadores + listeners = una mini app real' },
+      chips: [{ en: 'state', es: 'estado' }, { en: 'event', es: 'evento' }, { en: 'update', es: 'actualizar' }] },
+
+    { type: 'code', dur: 8,
+      code: 'let count = 0;\nfunction increase() {\n  count = count + 1;\n  screen.textContent = count;\n}',
+      caption: { en: 'The state lives in a variable. The handler changes it, then paints the screen.',
+                 es: 'El estado vive en una variable. El manejador lo cambia y luego pinta la pantalla.' },
+      labels: [
+        { token: 'let count', label: { en: 'the state: remembered between clicks', es: 'el estado: se recuerda entre clics' } },
+        { token: 'screen.textContent = count', label: { en: 'show the new state', es: 'muestra el nuevo estado' } }
+      ] },
+
+    { type: 'steps', dur: 9,
+      frames: [
+        { html: '<div style="text-align:center"><p style="font-size:3em;font-family:monospace;margin:0;color:#eaf6ff">0</p><button style="padding:8px 22px;font-size:1.1em;border-radius:12px;border:2px solid #7fd4ff;background:#0b1d33;color:#eaf6ff">+1</button></div>' },
+        { html: '<div style="text-align:center"><p style="font-size:3em;font-family:monospace;margin:0;color:#3ddc84">1</p><button style="padding:8px 22px;font-size:1.1em;border-radius:12px;border:2px solid #7fd4ff;background:#0b1d33;color:#eaf6ff">+1</button></div>' },
+        { html: '<div style="text-align:center"><p style="font-size:3em;font-family:monospace;margin:0;color:#ffd75e">2</p><button style="padding:8px 22px;font-size:1.1em;border-radius:12px;border:2px solid #7fd4ff;background:#0b1d33;color:#eaf6ff">+1</button></div>' }
+      ],
+      caption: { en: 'Every click: read the state, add one, paint the screen. That is the whole loop.',
+                 es: 'En cada clic: lee el estado, suma uno, pinta la pantalla. Ese es todo el ciclo.' } },
+
+    { type: 'code', dur: 7,
+      code: "plus.addEventListener('click', increase);\nminus.addEventListener('click', decrease);\nresetBtn.addEventListener('click', resetApp);",
+      caption: { en: 'Each button gets its own handler. One app, three powers.',
+                 es: 'Cada botón recibe su propio manejador. Una app, tres poderes.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'What must increase() do besides adding 1?', es: '¿Qué debe hacer increase() además de sumar 1?' },
+      options: [{ en: 'Update the screen text', es: 'Actualizar el texto en pantalla' }, { en: 'Delete the button', es: 'Borrar el botón' }, { en: 'Reload the page', es: 'Recargar la página' }],
+      answer: 0,
+      caption: { en: 'Change the state AND the display — both, every click.', es: 'Cambia el estado Y la pantalla: ambos, en cada clic.' } },
+
+    { type: 'title', emoji: '⚔️', dur: 5,
+      title: { en: 'Boss time, Cadet!', es: '¡Hora del jefe, Cadete!' },
+      subtitle: { en: 'Build the full click counter — +1, -1 and Reset', es: 'Construye el contador completo: +1, -1 y Reset' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

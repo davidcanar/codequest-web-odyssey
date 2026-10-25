@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Async Signals</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Async Signals', es: 'Señales asíncronas' },
+  scenes: [
+    { type: 'title', emoji: '📡', dur: 5,
+      title: { en: 'Async Signals', es: 'Señales asíncronas' },
+      subtitle: { en: 'Wait for data without freezing the ship', es: 'Espera datos sin congelar la nave' },
+      chips: [{ en: 'Promise', es: 'Promise' }, { en: 'async', es: 'async' }, { en: 'await', es: 'await' }] },
+
+    { type: 'code', dur: 8,
+      code: "const photo = Promise.resolve('nebula.jpg');",
+      caption: { en: 'A Promise is a container for a value that arrives later. Promise.resolve makes one that is ready already.',
+                 es: 'Una Promise es un contenedor de un valor que llega después. Promise.resolve crea una que ya está lista.' },
+      labels: [
+        { token: 'Promise.resolve', label: { en: 'a promise that already holds its value', es: 'una promesa que ya tiene su valor' } }
+      ] },
+
+    { type: 'code', dur: 8,
+      code: 'async function showPhoto() {\n  const photo = await fetchPhoto();\n  console.log(photo);\n}',
+      caption: { en: 'async marks a function that knows how to wait; await pauses until the value lands.',
+                 es: 'async marca una función que sabe esperar; await pausa hasta que llegue el valor.' },
+      labels: [
+        { token: 'async', label: { en: 'this function may await', es: 'esta función puede usar await' } },
+        { token: 'await', label: { en: 'pause here until it resolves', es: 'pausa aquí hasta que se resuelva' } }
+      ] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: 'showPhoto();' },
+        { t: '"nebula.jpg"', out: true },
+        { t: 'showPhoto() instanceof Promise' },
+        { t: 'true', out: true }
+      ],
+      caption: { en: 'The call returns a Promise immediately; the log lands when the await finishes.',
+                 es: 'La llamada devuelve una Promise de inmediato; el log llega cuando termina el await.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'What does calling an async function always return?', es: '¿Qué devuelve siempre una función async al llamarla?' },
+      options: [{ en: 'A Promise', es: 'Una Promise' }, { en: 'A string', es: 'Una cadena' }, { en: 'undefined', es: 'undefined' }],
+      answer: 0,
+      caption: { en: 'Always a Promise — the value arrives once the awaits finish.', es: 'Siempre una Promise: el valor llega cuando terminan los await.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Catch the deep-space signal with async and await', es: 'Capta la señal del espacio profundo con async y await' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

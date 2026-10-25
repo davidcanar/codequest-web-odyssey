@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeQuest: Web Odyssey</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/exercises.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<div id="app">
+  <header id="hud" class="hidden">
+    <button id="hud-home" class="hud-btn icon-btn" title="Home">🏠</button>
+    <div class="hud-glass hud-xp-wrap">
+      <span id="hud-lvl" class="hud-lvl">LV 1</span>
+      <div class="xpbar"><div id="hud-xpfill" class="xpfill"></div></div>
+      <span id="hud-xptext" class="hud-xptext">0 XP</span>
+    </div>
+    <div class="hud-glass hud-stat" id="hud-streak-wrap" title="Daily streak">🔥 <b id="hud-streak">0</b></div>
+    <div class="hud-glass hud-stat" title="Gems">💎 <b id="hud-gems">0</b></div>
+    <div class="hud-glass hud-stat" id="hud-hearts-wrap" title="Hearts">
+      <span id="hud-hearts">❤️×5</span>
+    </div>
+    <button id="hud-lang" class="hud-btn" title="Language">🌐 EN</button>
+    <button id="hud-ach" class="hud-btn icon-btn" title="Achievements">🏆</button>
+    <button id="hud-settings" class="hud-btn icon-btn" title="Settings">⚙️</button>
+  </header>
+  <main id="screen"></main>
+</div>
+
+<div id="mascot" class="mascot mood-idle hidden" title="Cosmo">
+  <div class="mascot-body">
+    <div class="mascot-antenna"><div class="mascot-bulb"></div></div>
+    <div class="mascot-face">
+      <div class="mascot-eye left"></div>
+      <div class="mascot-eye right"></div>
+      <div class="mascot-mouth"></div>
+    </div>
+    <div class="mascot-chest"></div>
+  </div>
+  <div class="mascot-shadow"></div>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+<div id="confetti-root"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/hud.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/video.js"></script>
+<script src="js/sandbox.js"></script>
+<script src="js/exercises.js"></script>
+<script src="js/achievements.js"></script>
+<script src="js/durations.js"></script>
+<script src="js/levels/html.js"></script>
+<script src="js/levels/css-a.js"></script>
+<script src="js/levels/css-b.js"></script>
+<script src="js/levels/js-a.js"></script>
+<script src="js/levels/js-b.js"></script>
+<script src="js/levels/final.js"></script>
+<script src="js/map.js"></script>
+<script src="js/level.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

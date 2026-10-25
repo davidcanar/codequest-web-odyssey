@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Flexbox II</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Flexbox II', es: 'Flexbox II' },
+  scenes: [
+    { type: 'title', emoji: '↕️', dur: 5,
+      title: { en: 'Flexbox II', es: 'Flexbox II' },
+      subtitle: { en: 'align-items, gap, flex-wrap and flex-direction', es: 'align-items, gap, flex-wrap y flex-direction' },
+      chips: [{ en: 'flex-direction', es: 'flex-direction' }, { en: 'align-items', es: 'align-items' }, { en: 'gap', es: 'gap' }] },
+
+    { type: 'code', dur: 8,
+      code: '.crew {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 16px;\n}',
+      caption: { en: 'Four dials steer any flex container: direction, cross-axis alignment, spacing — and wrapping.',
+                 es: 'Cuatro diales gobiernan cualquier contenedor flex: dirección, alineación cruzada, espaciado y plegado.' },
+      labels: [
+        { token: 'flex-direction: column', label: { en: 'stacks the items top to bottom', es: 'apila los elementos de arriba abajo' } },
+        { token: 'align-items: center', label: { en: 'centers them on the cross axis', es: 'los centra en el eje cruzado' } },
+        { token: 'gap: 16px', label: { en: 'equal space between items — no margin math', es: 'espacio igual entre elementos: sin cálculos de margin' } }
+      ] },
+
+    { type: 'flex', dur: 12,
+      frames: [
+        { css: 'flex-direction: row; align-items: center', justify: 'flex-start', align: 'center', dir: 'row' },
+        { css: 'flex-direction: column; align-items: center', justify: 'center', align: 'center', dir: 'column' }
+      ],
+      caption: { en: 'flex-direction rotates the main axis: row flows across, column flows down.',
+                 es: 'flex-direction gira el eje principal: row fluye hacia los lados y column hacia abajo.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which property adds equal space BETWEEN flex items?', es: '¿Qué propiedad añade espacio igual ENTRE los flex items?' },
+      options: [{ en: 'gap', es: 'gap' }, { en: 'margin-all', es: 'margin-all' }, { en: 'padding-row', es: 'padding-row' }],
+      answer: 0,
+      caption: { en: 'gap: 16px drops exactly 16px between neighbors — first and last stay put.', es: 'gap: 16px deja exactamente 16px entre vecinos: el primero y el último no se mueven.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Stack the crew vertically, centered, with a 16px gap', es: 'Apila a la tripulación en vertical, centrada y con un gap de 16px' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

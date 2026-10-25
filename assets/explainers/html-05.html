@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Link Like a Captain</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Link Like a Captain', es: 'Enlaza como capitán' },
+  scenes: [
+    { type: 'title', emoji: '🔗', dur: 5,
+      title: { en: 'Link Like a Captain', es: 'Enlaza como capitán' },
+      subtitle: { en: 'Absolute, relative, tabs and email', es: 'Absolutas, relativas, pestañas y correo' },
+      chips: [{ en: 'href', es: 'href' }, { en: 'target', es: 'target' }, { en: 'mailto', es: 'mailto' }] },
+
+    { type: 'code', dur: 8,
+      code: '<a href="https://cosmo.dev">Cosmo HQ</a>\n<a href="about.html">About</a>',
+      caption: { en: 'Full https:// address = absolute. Short file path = relative.',
+                 es: 'Dirección completa con https:// = absoluta. Ruta corta de archivo = relativa.' },
+      labels: [
+        { token: 'https://cosmo.dev', label: { en: 'absolute — anywhere on the web', es: 'absoluta — a cualquier parte de la web' } },
+        { token: 'about.html', label: { en: 'relative — a file on your own site', es: 'relativa — un archivo de tu propio sitio' } }
+      ] },
+
+    { type: 'browser', dur: 7,
+      url: 'https://cosmo.dev',
+      html: '<h1 style="margin:0 0 6px;font:1.5em sans-serif">Cosmo HQ 🚀</h1><p style="font:14px sans-serif">Welcome aboard, traveler!</p>',
+      caption: { en: 'An absolute URL works from any page in the universe.',
+                 es: 'Una URL absoluta funciona desde cualquier página del universo.' } },
+
+    { type: 'code', dur: 8,
+      code: '<a href="news.html" target="_blank">News</a>\n<a href="mailto:hi@cosmo.dev">Email</a>',
+      caption: { en: 'target="_blank" opens a new tab. mailto: opens the email app.',
+                 es: 'target="_blank" abre una pestaña nueva. mailto: abre la app de correo.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which link opens the visitor\'s email app?', es: '¿Qué enlace abre la app de correo del visitante?' },
+      options: [{ en: 'target="_blank"', es: 'target="_blank"' }, { en: 'mailto:hi@cosmo.dev', es: 'mailto:hi@cosmo.dev' }, { en: 'about.html', es: 'about.html' }],
+      answer: 1,
+      caption: { en: 'mailto: inside href = an instant letter to space.',
+                 es: 'mailto: dentro de href = una carta instantánea al espacio.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build a link bar: one web, one relative and one mailto link', es: 'Construye una barra de enlaces: uno web, uno relativo y uno mailto' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Paragraphs &amp; Breaks</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Paragraphs & Breaks', es: 'Párrafos y saltos' },
+  scenes: [
+    { type: 'title', emoji: '📝', dur: 5,
+      title: { en: 'Paragraphs & Breaks', es: 'Párrafos y saltos' },
+      subtitle: { en: 'Give your text room to breathe', es: 'Dale aire a tu texto' },
+      chips: [{ en: 'p', es: 'p' }, { en: 'br', es: 'br' }, { en: 'hr', es: 'hr' }] },
+
+    { type: 'code', dur: 8,
+      code: { en: '<p>Cosmo here!</p>\n<p>Reporting from orbit.</p>',
+              es: '<p>¡Cosmo al habla!</p>\n<p>Reportando desde la órbita.</p>' },
+      caption: { en: 'Each p tag makes its own block of text, with space before and after.',
+                 es: 'Cada etiqueta p crea su propio bloque de texto, con espacio arriba y abajo.' },
+      labels: [
+        { token: '<p>', label: { en: 'starts a paragraph', es: 'empieza un párrafo' } },
+        { token: '</p>', label: { en: 'ends the block', es: 'cierra el bloque' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: '<p>Star Base 7<br>Room 42</p>',
+      result: '<p style="margin:0;font:16px sans-serif">Star Base 7<br>Room 42</p>',
+      caption: { en: 'br pushes the text to a new line without ending the paragraph.',
+                 es: 'br empuja el texto a una línea nueva sin terminar el párrafo.' } },
+
+    { type: 'split', dur: 6,
+      code: '<p>Log one</p>\n<hr>\n<p>Log two</p>',
+      result: '<div style="font:15px sans-serif"><p style="margin:0">Log one</p><hr style="border:none;border-top:2px solid #888;margin:8px 0"><p style="margin:0">Log two</p></div>',
+      caption: { en: 'hr draws a divider line — a new chapter begins.',
+                 es: 'hr dibuja una línea separadora: empieza un nuevo capítulo.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which tag breaks a line INSIDE the same block?', es: '¿Qué etiqueta corta la línea DENTRO del mismo bloque?' },
+      options: [{ en: '<br>', es: '<br>' }, { en: '<hr>', es: '<hr>' }, { en: '<p>', es: '<p>' }],
+      answer: 0,
+      caption: { en: 'br = small break. hr = big divider. p = whole new block.',
+                 es: 'br = salto pequeño. hr = gran separador. p = bloque nuevo.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Write a ship log with two paragraphs, a br and an hr', es: 'Escribe una bitácora con dos párrafos, un br y un hr' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

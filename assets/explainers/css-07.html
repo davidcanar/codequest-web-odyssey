@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Display Modes</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Display Modes', es: 'Modos de display' },
+  scenes: [
+    { type: 'title', emoji: '🧱', dur: 5,
+      title: { en: 'Display Modes', es: 'Modos de display' },
+      subtitle: { en: 'block, inline, inline-block and none', es: 'block, inline, inline-block y none' },
+      chips: [{ en: 'block', es: 'block' }, { en: 'inline', es: 'inline' }, { en: 'inline-block', es: 'inline-block' }, { en: 'none', es: 'none' }] },
+
+    { type: 'code', dur: 8,
+      code: '.menu li { display: inline-block; }\n.badge    { display: inline-block; }\n.secret   { display: none; }',
+      caption: { en: 'One property, four personalities: block, inline, inline-block, none.',
+                es: 'Una propiedad, cuatro personalidades: block, inline, inline-block, none.' } },
+
+    { type: 'split', dur: 8,
+      code: '.menu li {\n  display: inline-block;\n  padding: 8px 12px;\n}',
+      result: '<div><span style="display:inline-block;padding:8px 12px;border:1px solid #38e0d8;border-radius:6px;margin:2px;color:#eaf0ff;font-size:.95em">Home</span> <span style="display:inline-block;padding:8px 12px;border:1px solid #38e0d8;border-radius:6px;margin:2px;color:#eaf0ff;font-size:.95em">Missions</span> <span style="display:inline-block;padding:8px 12px;border:1px solid #38e0d8;border-radius:6px;margin:2px;color:#eaf0ff;font-size:.95em">Contact</span></div>',
+      caption: { en: 'inline-block lines items up in a row AND accepts padding.',
+                 es: 'inline-block alinea los elementos en fila Y acepta padding.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which value hides an element completely?', es: '¿Qué valor oculta un elemento por completo?' },
+      options: [{ en: 'hidden', es: 'hidden' }, { en: 'none', es: 'none' }, { en: 'ghost', es: 'ghost' }],
+      answer: 1,
+      caption: { en: 'display: none — the cloaking device. Even its space disappears.', es: 'display: none — el dispositivo de camuflaje. Hasta su espacio desaparece.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build the menu row, style the badge — and cloak the secret', es: 'Arma la fila del menú, estiliza el badge y camufla el secreto' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

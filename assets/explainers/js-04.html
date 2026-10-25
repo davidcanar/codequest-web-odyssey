@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>String Signals</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'String Signals', es: 'Señales de texto' },
+  scenes: [
+    { type: 'title', emoji: '🔤', dur: 5,
+      title: { en: 'String Signals', es: 'Señales de texto' },
+      subtitle: { en: 'Glue text and make it dynamic', es: 'Pega texto y hazlo dinámico' },
+      chips: [{ en: 'string', es: 'string' }, { en: '+ glue', es: '+ para pegar' }, { en: 'backticks `', es: 'comillas invertidas `' }, { en: '${ }', es: '${ }' }] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: "'Co' + 'smo'" }, { t: '"Cosmo"', out: true },
+        { t: "'5' + 5" }, { t: '"55"', out: true }
+      ],
+      caption: { en: 'With strings, + glues. Once a string touches the plus, everything becomes text.',
+                 es: 'Con strings, el + pega. Cuando un string toca el plus, todo se vuelve texto.' } },
+
+    { type: 'code', dur: 9,
+      code: "const ship = 'Odyssey';\nlet msg = `The ${ship} is ready!`;",
+      caption: { en: 'The template literal: backticks open the message, ${ } drops a variable inside.',
+                 es: 'El template literal: las comillas invertidas abren el mensaje y ${ } mete una variable dentro.' },
+      labels: [
+        { token: '`', label: { en: 'backticks — turn on template powers', es: 'comillas invertidas: activan el superpoder' } },
+        { token: '${ship}', label: { en: 'a window where the variable jumps in', es: 'la ventanita donde salta la variable' } },
+        { token: 'The Odyssey is ready!', label: { en: 'the final text the console sees', es: 'el texto final que ve la consola' } }
+      ] },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which one actually prints the variable?', es: '¿Cuál imprime de verdad la variable?' },
+      options: [{ en: "'Hi ${name}'", es: "'Hi ${name}'" }, { en: '`Hi ${name}`', es: '`Hi ${name}`' }, { en: "'Hi name'", es: "'Hi name'" }],
+      answer: 1,
+      caption: { en: 'Single quotes print everything literally. Backticks make ${ } come alive.', es: 'Las comillas simples lo muestran todo tal cual. Las invertidas dan vida al ${ }.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build a template literal message for the ship in the training deck', es: 'Construye un mensaje con template literal para la nave en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

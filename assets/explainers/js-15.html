@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Click Events</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Click Events', es: 'Eventos de clic' },
+  scenes: [
+    { type: 'title', emoji: '🖱️', dur: 5,
+      title: { en: 'Click Events', es: 'Eventos de clic' },
+      subtitle: { en: 'The page finally answers back', es: 'La página por fin responde' },
+      chips: [{ en: 'addEventListener', es: 'addEventListener' }, { en: 'click', es: 'click' }, { en: 'handler', es: 'manejador' }] },
+
+    { type: 'code', dur: 8,
+      code: "function onLaunch() {\n  log.textContent = 'Liftoff!';\n}\nbtn.addEventListener('click', onLaunch);",
+      caption: { en: 'Write a handler function, then hand it to addEventListener so it fires on every click.',
+                 es: 'Escribe una función manejadora y entrégasela a addEventListener para que se dispare en cada clic.' },
+      labels: [
+        { token: 'onLaunch', label: { en: 'the handler: runs on each click', es: 'el manejador: corre en cada clic' } },
+        { token: "addEventListener", label: { en: 'wires handler to button', es: 'conecta el manejador al botón' } },
+        { token: "'click'", label: { en: 'the event to listen for', es: 'el evento a escuchar' } }
+      ] },
+
+    { type: 'steps', dur: 9,
+      frames: [
+        { html: '<div style="text-align:center"><div style="font-size:2.2em">🖱️</div><button style="padding:10px 26px;font-size:1.1em;border-radius:12px;border:2px solid #7fd4ff;background:#0b1d33;color:#eaf6ff;cursor:pointer">🚀 Launch</button></div>' },
+        { html: '<div style="text-align:center"><div style="font-size:1.1em;color:#ffd75e;margin-bottom:10px">click! ⚡</div><button style="padding:10px 26px;font-size:1.1em;border-radius:12px;border:2px solid #ffd75e;background:#33290f;color:#ffe9a8">🚀 Launch</button></div>' },
+        { html: '<div style="text-align:center"><div style="font-size:2.4em">🚀</div><div style="font-family:monospace;color:#3ddc84;margin-top:8px">log: "Liftoff!"</div></div>' }
+      ],
+      caption: { en: 'Click → the browser fires a click event → your handler runs. Every single time.',
+                 es: 'Clic → el navegador dispara el evento click → tu manejador se ejecuta. Siempre.' } },
+
+    { type: 'code', dur: 7,
+      code: "btn.addEventListener('click', onLaunch);  // ✅ pass the function\nbtn.addEventListener('click', onLaunch()); // ❌ runs it right now",
+      caption: { en: 'Pass the function itself — no parentheses — or it runs once, immediately.',
+                 es: 'Pasa la función misma, sin paréntesis, o se ejecuta una vez, de inmediato.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'After 3 clicks, how many times did the handler run?', es: 'Tras 3 clics, ¿cuántas veces se ejecutó el manejador?' },
+      options: [{ en: '1', es: '1' }, { en: '3', es: '3' }, { en: '0', es: '0' }],
+      answer: 1,
+      caption: { en: 'The listener stays armed: one run per click.', es: 'El listener sigue armado: una ejecución por clic.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Arm the launch button with your own handler', es: 'Arma el botón de lanzamiento con tu propio manejador' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

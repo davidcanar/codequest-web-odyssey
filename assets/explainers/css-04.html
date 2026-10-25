@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Box Model I</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Box Model I', es: 'Modelo de caja I' },
+  scenes: [
+    { type: 'title', emoji: '📦', dur: 5,
+      title: { en: 'Box Model I', es: 'Modelo de caja I' },
+      subtitle: { en: 'padding and border: inside the box', es: 'padding y border: por dentro de la caja' },
+      chips: [{ en: 'padding', es: 'padding' }, { en: 'border', es: 'border' }, { en: 'box model', es: 'modelo de caja' }] },
+
+    { type: 'boxmodel', dur: 9,
+      focus: ['content', 'padding', 'border'],
+      text: 'Space postcard',
+      caption: { en: 'content → <b>padding</b> (the cushion) → <b>border</b> (the edge). Margin waits outside.',
+                 es: 'content → <b>padding</b> (el cojín) → <b>border</b> (el borde). El margin espera afuera.' } },
+
+    { type: 'code', dur: 7,
+      code: '.card {\n  padding: 24px;\n  border: 3px solid purple;\n}',
+      caption: { en: 'padding: 24px cushions every side. The border shorthand reads: width, style, color.',
+                es: 'padding: 24px acolcha todos los lados. El atajo border se lee: ancho, estilo, color.' },
+      labels: [
+        { token: '24px', label: { en: 'cushion on all 4 sides', es: 'cojín en los 4 lados' } },
+        { token: 'solid', label: { en: 'a continuous line', es: 'una línea continua' } },
+        { token: 'purple', label: { en: 'the frame color', es: 'el color del marco' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: 'button {\n  padding: 12px 24px;\n  border: 2px solid navy;\n}',
+      result: '<button style="padding:12px 24px;border:2px solid #000080;background:#eaf0ff;color:#101743;font-size:1em;border-radius:6px;cursor:pointer">Launch 🚀</button>',
+      caption: { en: 'Two padding values: 12 top/bottom, 24 left/right. Chunky, comfy buttons.',
+                 es: 'Dos valores de padding: 12 arriba/abajo y 24 a los lados. Botones robustos y cómodos.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which one sits BETWEEN content and border?', es: '¿Cuál está ENTRE el contenido y el borde?' },
+      options: [{ en: 'margin', es: 'margin' }, { en: 'padding', es: 'padding' }, { en: 'width', es: 'width' }],
+      answer: 1,
+      caption: { en: 'Margin is outside the border — padding hugs the content inside.', es: 'El margin está fuera del borde: el padding abraza al contenido por dentro.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Give the postcard padding and a purple border', es: 'Dale a la postal padding y un borde morado' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Boxes in Boxes</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Boxes in Boxes', es: 'Cajas en cajas' },
+  scenes: [
+    { type: 'title', emoji: '📦', dur: 5,
+      title: { en: 'Boxes in Boxes', es: 'Cajas en cajas' },
+      subtitle: { en: 'div containers and the golden rule', es: 'contenedores div y la regla de oro' },
+      chips: [{ en: 'div', es: 'div' }, { en: 'nesting', es: 'anidación' }, { en: 'indentation', es: 'indentación' }] },
+
+    { type: 'code', dur: 8,
+      code: '<div>\n  <h2>Engine room</h2>\n  <p>Handle with care</p>\n</div>',
+      caption: { en: 'div is an invisible container that groups related content.',
+                 es: 'div es un contenedor invisible que agrupa contenido relacionado.' },
+      labels: [
+        { token: '<div>', label: { en: 'container — groups the section', es: 'contenedor — agrupa la sección' } },
+        { token: '  <p>', label: { en: 'indentation shows what is inside', es: 'la indentación muestra qué está dentro' } }
+      ] },
+
+    { type: 'tree', dur: 8,
+      data: { tag: 'div', kids: [ { tag: 'h2' }, { tag: 'p' } ] },
+      caption: { en: 'A div holds a whole subtree — boxes inside boxes.',
+                 es: 'Un div sostiene todo un subtree: cajas dentro de cajas.' } },
+
+    { type: 'steps', dur: 7,
+      frames: [
+        { html: '<pre style="font:14px monospace;color:#ff5e7a;margin:0">&lt;p&gt;&lt;em&gt;Hi&lt;/p&gt;&lt;/em&gt; ✗ crossed</pre>' },
+        { html: '<pre style="font:14px monospace;color:#3ddc84;margin:0">&lt;p&gt;&lt;em&gt;Hi&lt;/em&gt;&lt;/p&gt; ✓ correct</pre>' }
+      ],
+      caption: { en: 'Golden rule: close tags in reverse order — never cross them.',
+                 es: 'Regla de oro: cierra las etiquetas en orden inverso, nunca las cruces.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which nesting is correct?', es: '¿Qué anidado es correcto?' },
+      options: [{ en: '<p><strong>Hi</p></strong>', es: '<p><strong>Hi</p></strong>' }, { en: '<p><strong>Hi</strong></p>', es: '<p><strong>Hi</strong></p>' }, { en: '<strong><p>Hi</strong></p>', es: '<strong><p>Hi</strong></p>' }],
+      answer: 1,
+      caption: { en: 'Last opened, first closed.', es: 'La última en abrirse, la primera en cerrarse.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build a station page with a div inside a div', es: 'Construye una página de estación con un div dentro de otro div' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

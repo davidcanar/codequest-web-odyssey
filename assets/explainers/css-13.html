@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Keyframe Animations</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Keyframe Animations', es: 'Animaciones keyframe' },
+  scenes: [
+    { type: 'title', emoji: '🎬', dur: 5,
+      title: { en: 'Keyframe Animations', es: 'Animaciones keyframe' },
+      subtitle: { en: '@keyframes writes the movie — animation plays it', es: '@keyframes escribe la película — animation la reproduce' },
+      chips: [{ en: '@keyframes', es: '@keyframes' }, { en: 'animation', es: 'animation' }, { en: 'infinite', es: 'infinite' }] },
+
+    { type: 'code', dur: 9,
+      code: '@keyframes float {\n  from { transform: translateY(0); }\n  to { transform: translateY(-20px); }\n}\n.ufo {\n  animation: float 2s infinite;\n}',
+      caption: { en: '@keyframes is the blueprint: a name and the styles at each stage. animation plays it on an element.',
+                 es: '@keyframes es el plano: un nombre y los estilos de cada etapa. animation lo reproduce en un elemento.' },
+      labels: [
+        { token: '@keyframes float', label: { en: 'the movie blueprint, named float', es: 'el plano de la película, llamado float' } },
+        { token: 'from / to', label: { en: 'first frame (0%) and last frame (100%)', es: 'primer fotograma (0%) y último (100%)' } },
+        { token: 'animation:', label: { en: 'presses play on the element', es: 'aprieta el play en el elemento' } },
+        { token: '2s infinite', label: { en: '2 seconds per loop, repeating forever', es: '2 segundos por ciclo, repitiendo por siempre' } }
+      ] },
+
+    { type: 'steps', dur: 10,
+      frames: [
+        { html: '<div style="font-size:3em;text-align:center;padding:20px">🛸</div>', css: '' },
+        { html: '<div style="font-size:3em;text-align:center;padding:40px 20px 0;transform:translateY(-20px)">🛸</div>', css: '' },
+        { html: '<div style="font-size:3em;text-align:center;padding:40px 40px 0;transform:translateY(-20px) translateX(20px)">🛸</div>', css: '' }
+      ],
+      caption: { en: 'Keyframes are the stops on the route — CSS flies the UFO between them, frame by frame.',
+                 es: 'Los keyframes son las paradas de la ruta: CSS vuela el OVNI entre ellas, fotograma a fotograma.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'How long is ONE loop of animation: float 2s infinite?', es: '¿Cuánto dura UN ciclo de animation: float 2s infinite?' },
+      options: [{ en: '2 seconds', es: '2 segundos' }, { en: 'forever', es: 'para siempre' }, { en: '2 minutes', es: '2 minutos' }],
+      answer: 0,
+      caption: { en: '2s per loop; infinite just means it starts over the moment it ends.', es: '2s por ciclo; infinite solo significa que vuelve a empezar al terminar.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Write @keyframes float and play it on the UFO, forever', es: 'Escribe @keyframes float y reprodúcela en el OVNI, para siempre' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

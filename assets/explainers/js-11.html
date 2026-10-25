@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Array Superpowers</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Array Superpowers', es: 'Súper poderes de arreglos' },
+  scenes: [
+    { type: 'title', emoji: '⚡', dur: 5,
+      title: { en: 'Array Superpowers', es: 'Súper poderes de arreglos' },
+      subtitle: { en: 'Three tools that bend lists to your will', es: 'Tres herramientas que doblegan las listas' },
+      chips: [{ en: 'map', es: 'map' }, { en: 'filter', es: 'filter' }, { en: 'reduce', es: 'reduce' }] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: 'const nums = [1, 2, 3];' },
+        { t: 'nums.map(n => n * 2)' }, { t: '[2, 4, 6]', out: true },
+        { t: 'nums.filter(n => n > 1)' }, { t: '[2, 3]', out: true },
+        { t: 'nums.reduce((a, b) => a + b)' }, { t: '6', out: true }
+      ],
+      caption: { en: 'map transforms every item, filter keeps the ones that pass, reduce boils it down to one value.',
+                 es: 'map transforma cada elemento, filter conserva los que pasan, reduce lo reduce a un solo valor.' } },
+
+    { type: 'code', dur: 8,
+      code: 'const doubles = nums.map(n => n * 2);',
+      caption: { en: 'map creates a NEW array — the original stays untouched.',
+                 es: 'map crea un arreglo NUEVO: el original queda intacto.' },
+      labels: [
+        { token: 'map', label: { en: 'runs the function on every item', es: 'aplica la función a cada elemento' } },
+        { token: 'n => n * 2', label: { en: 'a tiny function per item', es: 'una mini función por elemento' } }
+      ] },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which one turns [5, 12, 8] into [12]?', es: '¿Cuál convierte [5, 12, 8] en [12]?' },
+      options: [{ en: 'map', es: 'map' }, { en: 'filter', es: 'filter' }, { en: 'reduce', es: 'reduce' }],
+      answer: 1,
+      caption: { en: 'filter keeps items where the test is true — 12 is the only one over 10.',
+                 es: 'filter conserva los elementos donde la prueba es verdadera: 12 es el único mayor que 10.' } },
+
+    { type: 'code', dur: 7,
+      code: 'const total = [1, 2, 3].reduce((a, b) => a + b, 0);',
+      caption: { en: 'reduce walks the list, accumulating: 0+1=1, 1+2=3, 3+3=6.',
+                 es: 'reduce recorre la lista acumulando: 0+1=1, 1+2=3, 3+3=6.' },
+      labels: [
+        { token: 'a + b', label: { en: 'the running total plus the next item', es: 'el total acumulado más el siguiente' } },
+        { token: ', 0', label: { en: 'the starting value', es: 'el valor inicial' } }
+      ] },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Map, filter and reduce the scores in the training deck', es: 'Aplica map, filter y reduce a los puntajes en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

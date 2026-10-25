@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Loop Reactor</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Loop Reactor', es: 'Reactor de bucles' },
+  scenes: [
+    { type: 'title', emoji: '🔁', dur: 5,
+      title: { en: 'Loop Reactor', es: 'Reactor de bucles' },
+      subtitle: { en: 'Write it once, spin it a thousand times', es: 'Escríbelo una vez, gíralo mil veces' },
+      chips: [{ en: 'for', es: 'for' }, { en: 'while', es: 'while' }, { en: 'i++', es: 'i++' }, { en: 'condition', es: 'condición' }] },
+
+    { type: 'console', dur: 9,
+      lines: [
+        { t: 'for (let i = 1; i <= 3; i++) {' },
+        { t: '  console.log(i);' },
+        { t: '}' },
+        { t: '1', out: true },
+        { t: '2', out: true },
+        { t: '3', out: true }
+      ],
+      caption: { en: 'One loop, three rounds: the console counts 1, 2, 3 all by itself.',
+                 es: 'Un bucle, tres vueltas: la consola cuenta 1, 2, 3 sola.' } },
+
+    { type: 'code', dur: 9,
+      code: 'for (let i = 1; i <= 3; i++) {\n  console.log(i);\n}',
+      caption: { en: 'Anatomy of for: start once, check the condition, run the body, step.',
+                 es: 'Anatomía de for: empieza una vez, revisa la condición, corre el cuerpo, avanza.' },
+      labels: [
+        { token: 'let i = 1', label: { en: 'the start — runs once', es: 'el inicio: corre una vez' } },
+        { token: 'i <= 3', label: { en: 'the condition — keep going while true', es: 'la condición: sigue mientras sea verdadera' } },
+        { token: 'i++', label: { en: 'the step — after every round', es: 'el paso: después de cada vuelta' } }
+      ] },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'for (let i = 0; i < 5; i++) — how many rounds?', es: 'for (let i = 0; i < 5; i++) — ¿cuántas vueltas?' },
+      options: [{ en: '4', es: '4' }, { en: '5', es: '5' }, { en: '6', es: '6' }],
+      answer: 1,
+      caption: { en: 'i visits 0, 1, 2, 3, 4 — five values — then 5 < 5 fails and the loop stops.', es: 'i visita 0, 1, 2, 3, 4 (cinco valores) y luego 5 < 5 falla: el bucle se detiene.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Fire a 3-2-1 countdown with a for loop in the training deck', es: 'Lanza una cuenta regresiva 3-2-1 con un bucle for en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

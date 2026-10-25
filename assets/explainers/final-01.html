@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>BOSS 1: Landing Page</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Launch the Landing Page', es: 'Lanza la Landing Page' },
+  scenes: [
+    { type: 'title', emoji: '🚀', dur: 4,
+      title: { en: 'Launch the Landing Page', es: 'Lanza la Landing Page' },
+      subtitle: { en: 'BOSS 1: HTML and CSS fly together', es: 'JEFE 1: HTML y CSS vuelan juntos' },
+      chips: [{ en: 'header', es: 'header' }, { en: 'hero', es: 'hero' }, { en: 'footer', es: 'footer' }] },
+
+    { type: 'code', dur: 9,
+      code: '<header>\n  <h1>Cosmo Tours</h1>\n</header>\n\n<main>\n  <p>Trips to every planet</p>\n  <a href="https://cosmo.space">Book now</a>\n</main>\n\n<footer>© 2026 Cosmo Tours</footer>',
+      caption: { en: 'One page, three regions: the header crowns, the main acts, the footer signs off.',
+                 es: 'Una página, tres regiones: el header corona, el main actúa, el footer despide.' },
+      labels: [
+        { token: '<header>', label: { en: 'the top of the page', es: 'la parte superior de la página' } },
+        { token: '<main>', label: { en: 'the heart of the page', es: 'el corazón de la página' } },
+        { token: '<footer>', label: { en: 'the grand finale', es: 'el gran final' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: '.hero {\n  background-color: navy;\n  color: white;\n  text-align: center;\n}',
+      result: '<div style="background:#000080;color:#fff;text-align:center;padding:18px;font-family:sans-serif"><b style="font-size:1.6em">REACH THE STARS</b><div style="margin-top:6px;font-size:.9em">Book your trip today</div></div>',
+      caption: { en: 'CSS paints the hero: a navy sky, white letters, everything centered.',
+                 es: 'CSS pinta el hero: cielo azul marino, letras blancas, todo centrado.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which tag signs the bottom of the page?', es: '¿Qué etiqueta firma la parte final de la página?' },
+      options: [{ en: '<header>', es: '<header>' }, { en: '<footer>', es: '<footer>' }, { en: '<main>', es: '<main>' }],
+      answer: 1,
+      caption: { en: 'footer = the grand finale: contact, copyright, goodbyes.', es: 'footer = el gran final: contacto, derechos, despedidas.' } },
+
+    { type: 'browser', dur: 7,
+      url: 'https://cosmo-tours.web',
+      html: '<div style="font-family:sans-serif"><header style="background:#000080;color:#fff;text-align:center;padding:14px"><h1 style="margin:0;font-size:1.7em">Cosmo Tours</h1></header><main style="padding:14px;text-align:center"><p style="margin:.4em 0">Trips to every planet 🪐</p><a style="color:#000080">Book your flight</a></main><footer style="border-top:1px solid #ccc;padding:10px;text-align:center;color:#555">© 2026 Cosmo Tours</footer></div>',
+      caption: { en: 'Structure from HTML, style from CSS — that is a landing page.',
+                 es: 'La estructura de HTML, el estilo de CSS: eso es una landing page.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Beat the boss: build and paint the full landing page', es: 'Vence al jefe: construye y pinta la landing page completa' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

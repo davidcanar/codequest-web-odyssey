@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Images On Board</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Images On Board', es: 'Imágenes a bordo' },
+  scenes: [
+    { type: 'title', emoji: '🖼️', dur: 5,
+      title: { en: 'Images On Board', es: 'Imágenes a bordo' },
+      subtitle: { en: 'Show pictures — and describe them', es: 'Muestra imágenes — y descríbelas' },
+      chips: [{ en: 'img', es: 'img' }, { en: 'src', es: 'src' }, { en: 'alt', es: 'alt' }] },
+
+    { type: 'code', dur: 8,
+      code: '<img src="comet.png" alt="Blue comet" width="150">',
+      caption: { en: 'img has no closing tag — all its info lives in the opening tag.',
+                 es: 'img no tiene etiqueta de cierre: toda su información va en la etiqueta de apertura.' },
+      labels: [
+        { token: 'src', label: { en: 'which file to show', es: 'qué archivo mostrar' } },
+        { token: 'alt', label: { en: 'description for screen readers', es: 'descripción para lectores de pantalla' } },
+        { token: 'width', label: { en: 'size in pixels', es: 'tamaño en píxeles' } }
+      ] },
+
+    { type: 'split', dur: 7,
+      code: '<img src="comet.png" alt="Blue comet">',
+      result: '<div style="border:2px dashed #999;border-radius:8px;padding:14px;text-align:center;font:15px sans-serif">🖼️ Blue comet</div>',
+      caption: { en: 'If the file is missing, the browser shows the alt text instead.',
+                 es: 'Si el archivo falta, el navegador muestra el texto alt en su lugar.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which attribute DESCRIBES the picture?', es: '¿Qué atributo DESCRIBE la imagen?' },
+      options: [{ en: 'src', es: 'src' }, { en: 'width', es: 'width' }, { en: 'alt', es: 'alt' }],
+      answer: 2,
+      caption: { en: 'alt = alternative text — read aloud for cadets who cannot see.',
+                 es: 'alt = texto alternativo: se lee en voz alta para quienes no pueden ver.' } },
+
+    { type: 'steps', dur: 8,
+      frames: [
+        { html: '<p style="font:15px sans-serif;margin:0">No alt: <span style="border:1px solid #ff5e7a;padding:4px;border-radius:4px">broken image?</span></p>' },
+        { html: '<p style="font:15px sans-serif;margin:0">With alt: <span style="border:1px solid #3ddc84;padding:4px;border-radius:4px">A blue comet crosses the sky 🚀</span></p>' }
+      ],
+      caption: { en: 'Alt text is a superpower — never skip it!',
+                 es: '¡El texto alt es un superpoder: nunca lo omitas!' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build a two-image gallery with alt text and a width', es: 'Construye una galería de dos imágenes con alt y un width' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

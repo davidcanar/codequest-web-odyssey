@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Decision Deck</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Decision Deck', es: 'Cubierta de decisiones' },
+  scenes: [
+    { type: 'title', emoji: '🚦', dur: 5,
+      title: { en: 'Decision Deck', es: 'Cubierta de decisiones' },
+      subtitle: { en: 'Code that chooses its own path', es: 'Código que elige su propio camino' },
+      chips: [{ en: 'if', es: 'if' }, { en: 'else', es: 'else' }, { en: 'condition', es: 'condición' }, { en: 'true / false', es: 'true / false' }] },
+
+    { type: 'code', dur: 9,
+      code: "if (fuel > 0) {\n  console.log('Go');\n} else {\n  console.log('Wait');\n}",
+      caption: { en: 'if asks a question. True? The first block runs. False? else steps in.',
+                 es: 'if hace una pregunta. ¿Verdadero? Corre el primer bloque. ¿Falso? Entra el else.' },
+      labels: [
+        { token: 'fuel > 0', label: { en: 'the condition, inside parentheses', es: 'la condición, entre paréntesis' } },
+        { token: "{ console.log('Go'); }", label: { en: 'runs only when it is true', es: 'corre solo cuando es verdadera' } },
+        { token: 'else', label: { en: 'the fallback — runs when false', es: 'el plan B: corre cuando es falsa' } }
+      ] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: 'let fuel = 0;' },
+        { t: "if (fuel > 0) { ... } else { ... }" },
+        { t: 'Wait', out: true }
+      ],
+      caption: { en: 'fuel is 0, so fuel > 0 is false — the console shows Wait.', es: 'fuel es 0, así que fuel > 0 es falsa: la consola muestra Wait.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'fuel = 50. What does `if (fuel > 100)` print?', es: 'fuel = 50. ¿Qué muestra `if (fuel > 100)`?' },
+      options: [{ en: "'Full burn'", es: "'Full burn'" }, { en: 'nothing — the if block is skipped', es: 'nada: el bloque if se salta' }, { en: 'an error', es: 'un error' }],
+      answer: 1,
+      caption: { en: '50 > 100 is false, so the gate stays shut and nothing prints.', es: '50 > 100 es falso, así que la compuerta queda cerrada y no se muestra nada.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build the airlock check with if / else in the training deck', es: 'Construye el control de la esclusa con if / else en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

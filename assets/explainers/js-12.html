@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Object Blueprints</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Object Blueprints', es: 'Planos de objetos' },
+  scenes: [
+    { type: 'title', emoji: '🗂️', dur: 5,
+      title: { en: 'Object Blueprints', es: 'Planos de objetos' },
+      subtitle: { en: 'Named data, packed into one thing', es: 'Datos con nombre, empaquetados en uno' },
+      chips: [{ en: 'object', es: 'objeto' }, { en: 'property', es: 'propiedad' }, { en: 'method', es: 'método' }, { en: 'this', es: 'this' }] },
+
+    { type: 'code', dur: 7,
+      code: "const ship = {\n  name: 'Falcon',\n  fuel: 80\n};",
+      caption: { en: 'An object packs related data into named properties, inside curly braces.',
+                 es: 'Un objeto guarda datos relacionados en propiedades con nombre, entre llaves.' },
+      labels: [
+        { token: 'name: ', label: { en: 'the key', es: 'la clave' } },
+        { token: "'Falcon'", label: { en: 'the value', es: 'el valor' } }
+      ] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: 'ship.name' }, { t: '"Falcon"', out: true },
+        { t: 'ship.fuel = 100;' },
+        { t: 'ship.launch()' }, { t: '"Liftoff!"', out: true }
+      ],
+      caption: { en: 'A dot reads a property; parentheses call a method — a function that belongs to the object.',
+                 es: 'Un punto lee una propiedad; los paréntesis llaman a un método, una función del objeto.' } },
+
+    { type: 'code', dur: 8,
+      code: "greet: function () {\n  return 'Hi, ' + this.name;\n}",
+      caption: { en: "Inside a method, this means 'this object' — this.name reads its own name.",
+                 es: "Dentro de un método, this significa 'este objeto': this.name lee su propio nombre." },
+      labels: [
+        { token: 'this', label: { en: 'the object itself', es: 'el propio objeto' } },
+        { token: 'function', label: { en: 'a method is a property holding a function', es: 'un método es una propiedad que guarda una función' } }
+      ] },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'How do you read the fuel of ship?', es: '¿Cómo lees el combustible de ship?' },
+      options: [{ en: 'ship.fuel', es: 'ship.fuel' }, { en: 'ship->fuel', es: 'ship->fuel' }, { en: 'fuel(ship)', es: 'fuel(ship)' }],
+      answer: 0,
+      caption: { en: 'Dot notation: object first, property second.', es: 'Notación de punto: primero el objeto, luego la propiedad.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build a ship object with a launch method in the training deck', es: 'Construye un objeto nave con método launch en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

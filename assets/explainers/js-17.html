@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Modern JS Tricks</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Modern JS Tricks', es: 'Trucos de JS moderno' },
+  scenes: [
+    { type: 'title', emoji: '✨', dur: 5,
+      title: { en: 'Modern JS Tricks', es: 'Trucos de JS moderno' },
+      subtitle: { en: 'Write less, do more — ES6 and beyond', es: 'Escribe menos, haz más: ES6 y más allá' },
+      chips: [{ en: 'destructuring', es: 'destructuring' }, { en: 'spread', es: 'spread' }, { en: 'template literal', es: 'template literal' }, { en: 'optional chaining', es: 'optional chaining' }] },
+
+    { type: 'code', dur: 9,
+      code: 'const { name, fuel } = ship;\nconst copy = [...fleet];',
+      caption: { en: 'Destructuring pulls properties into variables; spread expands or copies a list.',
+                 es: 'El destructuring saca propiedades a variables; el spread expande o copia una lista.' },
+      labels: [
+        { token: '{ name, fuel }', label: { en: 'destructuring: unpack into variables', es: 'destructuring: desempaca a variables' } },
+        { token: '...', label: { en: 'spread: expand or copy', es: 'spread: expande o copia' } }
+      ] },
+
+    { type: 'code', dur: 8,
+      code: 'const msg = `Pilot ${name} ready`;',
+      caption: { en: 'Backticks make a template literal — text with ${} slots for any value.',
+                 es: 'Los acentos graves crean un template literal: texto con huecos ${} para cualquier valor.' },
+      labels: [
+        { token: '`', label: { en: 'backticks open and close it', es: 'los acentos graves lo abren y cierran' } },
+        { token: '${name}', label: { en: 'a slot for any expression', es: 'un hueco para cualquier expresión' } }
+      ] },
+
+    { type: 'console', dur: 7,
+      lines: [
+        { t: 'const nums = [1, 2, 3];' },
+        { t: 'sum(...nums)' }, { t: '6', out: true },
+        { t: 'astro.rank?.level' }, { t: 'undefined', out: true }
+      ],
+      caption: { en: 'Spread feeds a whole array to a function; optional chaining answers undefined instead of crashing.',
+                 es: 'El spread le da un arreglo completo a una función; el optional chaining responde undefined en vez de fallar.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which safely reads a property that may not exist?', es: '¿Cuál lee con seguridad una propiedad que quizá no existe?' },
+      options: [{ en: 'astro.rank?.level', es: 'astro.rank?.level' }, { en: 'astro.rank!level', es: 'astro.rank!level' }, { en: 'astro:rank:level', es: 'astro:rank:level' }],
+      answer: 0,
+      caption: { en: 'The ?. asks politely — no crash if the path is missing.', es: 'El ?. pregunta con educación: sin error si el camino no existe.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Destructure, spread, template and chain — all four tricks', es: 'Destructuring, spread, template y chaining: los cuatro trucos' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

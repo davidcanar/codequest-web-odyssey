@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Arrow Squadron</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Arrow Squadron', es: 'Escuadrón de flechas' },
+  scenes: [
+    { type: 'title', emoji: '🏹', dur: 5,
+      title: { en: 'Arrow Squadron', es: 'Escuadrón de flechas' },
+      subtitle: { en: 'Shorter machines and the rules of scope', es: 'Máquinas más cortas y las reglas del scope' },
+      chips: [{ en: '=>', es: '=>' }, { en: 'const', es: 'const' }, { en: 'global scope', es: 'scope global' }, { en: 'block scope', es: 'scope de bloque' }] },
+
+    { type: 'code', dur: 9,
+      code: "const shout = (word) => word + '!';",
+      caption: { en: 'The arrow function: parameters on the left, result on the right. One line, one machine.',
+                 es: 'La función flecha: parámetros a la izquierda, resultado a la derecha. Una línea, una máquina.' },
+      labels: [
+        { token: 'const shout =', label: { en: 'arrow functions ride inside a variable', es: 'las funciones flecha viajan dentro de una variable' } },
+        { token: '(word)', label: { en: 'the parameter', es: 'el parámetro' } },
+        { token: '=>', label: { en: 'the arrow — points to the result', es: 'la flecha: apunta al resultado' } },
+        { token: "word + '!'", label: { en: 'returned automatically, no braces needed', es: 'se devuelve solo, sin necesidad de llaves' } }
+      ] },
+
+    { type: 'console', dur: 7,
+      lines: [
+        { t: "shout('Cosmo')" }, { t: '"Cosmo!"', out: true },
+        { t: 'let shield = \'down\';' },
+        { t: "{ let shield = 'up'; }" },
+        { t: 'shield' }, { t: '"down"', out: true }
+      ],
+      caption: { en: 'The shield inside the block is a different box: outside, the global one still rules.',
+                 es: 'El escudo dentro del bloque es otra caja: fuera, manda el global.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: "A variable is born inside { … }. Where does it exist?", es: 'Una variable nace dentro de { … }. ¿Dónde existe?' },
+      options: [{ en: 'Everywhere in the program', es: 'En todo el programa' }, { en: 'Only inside those braces', es: 'Solo dentro de esas llaves' }, { en: 'Nowhere — it is invisible', es: 'En ninguna parte: es invisible' }],
+      answer: 1,
+      caption: { en: 'Block scope: a variable born between braces dies at the closing brace.', es: 'Scope de bloque: la variable que nace entre llaves muere en la llave de cierre.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Recruit shout with an arrow and test block scope in the training deck', es: 'Recluta a shout con una flecha y prueba el scope de bloque en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

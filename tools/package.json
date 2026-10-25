@@ -1,0 +1,20 @@
+{
+  "name": "codequest-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Asset generation pipeline for CodeQuest: Web Odyssey (TTS audio + explainer video recording)",
+  "scripts": {
+    "audio": "node gen-audio.mjs",
+    "videos": "node record-videos.mjs",
+    "verify": "node verify-assets.mjs",
+    "verify-offline": "node verify-offline.mjs",
+    "serve": "node serve.mjs"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "playwright-core": "^1.49.0",
+    "ssh2": "^1.16.0"
+  }
+}

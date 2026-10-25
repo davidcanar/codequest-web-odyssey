@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Meet CSS</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Meet CSS', es: 'Conoce CSS' },
+  scenes: [
+    { type: 'title', emoji: '🎨', dur: 5,
+      title: { en: 'Meet CSS', es: 'Conoce CSS' },
+      subtitle: { en: 'HTML is the skeleton — CSS is the style', es: 'HTML es el esqueleto — CSS es el estilo' },
+      chips: [{ en: 'selector', es: 'selector' }, { en: 'property', es: 'propiedad' }, { en: 'value', es: 'valor' }] },
+
+    { type: 'code', dur: 8,
+      code: 'h1 {\n  color: gold;\n}',
+      caption: { en: 'One CSS rule: a <b>selector</b> picks tags, and braces hold the declarations.',
+                es: 'Una regla CSS: un <b>selector</b> elige etiquetas y las llaves guardan las declaraciones.' },
+      labels: [
+        { token: 'h1', label: { en: 'selector — who gets styled', es: 'selector — quién recibe estilo' } },
+        { token: 'color:', label: { en: 'property — what changes', es: 'propiedad — qué cambia' } },
+        { token: 'gold;', label: { en: 'value — the new setting', es: 'valor — la nueva configuración' } }
+      ] },
+
+    { type: 'split', dur: 9,
+      code: 'h1 {\n  color: gold;\n  text-align: center;\n}',
+      result: '<h1 style="color:#ffd75e;text-align:center;font-size:2em;margin:.2em 0">My Space Page</h1>',
+      caption: { en: 'The browser reads the rule and paints every h1 gold, centered.',
+                 es: 'El navegador lee la regla y pinta cada h1 de dorado y centrado.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which symbol wraps the declarations of a rule?', es: '¿Qué símbolo envuelve las declaraciones de una regla?' },
+      options: [{ en: '( )', es: '( )' }, { en: '{ }', es: '{ }' }, { en: '[ ]', es: '[ ]' }],
+      answer: 1,
+      caption: { en: 'Curly braces { } are the walls of a CSS rule.', es: 'Las llaves { } son los muros de una regla CSS.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Write two rules in the training deck: a gold h1 and a 20px paragraph', es: 'Escribe dos reglas en la cubierta de entrenamiento: un h1 dorado y un párrafo de 20px' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

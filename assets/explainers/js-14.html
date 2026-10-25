@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Changing the Page</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Changing the Page', es: 'Cambiar la página' },
+  scenes: [
+    { type: 'title', emoji: '🖌️', dur: 5,
+      title: { en: 'Changing the Page', es: 'Cambiar la página' },
+      subtitle: { en: 'Text, styles and classes — live', es: 'Texto, estilos y clases, en vivo' },
+      chips: [{ en: 'textContent', es: 'textContent' }, { en: 'style', es: 'style' }, { en: 'classList', es: 'classList' }] },
+
+    { type: 'code', dur: 8,
+      code: "const msg = document.querySelector('#msg');\nmsg.textContent = 'Engines ready';",
+      caption: { en: 'textContent swaps the text inside an element. The old text is gone.',
+                 es: 'textContent sustituye el texto dentro del elemento. El texto anterior desaparece.' },
+      labels: [
+        { token: 'textContent', label: { en: 'the text inside the element', es: 'el texto dentro del elemento' } }
+      ] },
+
+    { type: 'code', dur: 8,
+      code: "box.style.backgroundColor = 'tomato';\nbox.classList.add('active');",
+      caption: { en: 'style sets one CSS rule inline; classList toggles whole classes from your stylesheet.',
+                 es: 'style pone una regla CSS en línea; classList alterna clases completas de tu hoja de estilos.' },
+      labels: [
+        { token: 'style.backgroundColor', label: { en: 'inline style — camelCase!', es: 'estilo en línea: ¡camelCase!' } },
+        { token: "classList.add", label: { en: 'adds a class', es: 'agrega una clase' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: "title.textContent = 'Space Facts';",
+      result: '<h1 style="font-size:2em;margin:0">Space Facts</h1>',
+      caption: { en: 'The page repaints instantly — no reload needed.',
+                 es: 'La página se redibuja al instante, sin recargar.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'Which is correct JavaScript for the CSS background-color?', es: '¿Cuál es el JavaScript correcto para el CSS background-color?' },
+      options: [{ en: 'el.style.background-color', es: 'el.style.background-color' }, { en: 'el.style.backgroundColor', es: 'el.style.backgroundColor' }, { en: 'el.backgroundColor', es: 'el.backgroundColor' }],
+      answer: 1,
+      caption: { en: 'CSS words with dashes become camelCase in JS.', es: 'Las palabras CSS con guiones se vuelven camelCase en JS.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Wake up the dashboard: text, background and class', es: 'Despierta el panel: texto, fondo y clase' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

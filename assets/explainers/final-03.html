@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Web Master Ceremony</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Web Master Ceremony', es: 'Ceremonia Web Master' },
+  scenes: [
+    { type: 'title', emoji: '🎓', dur: 5,
+      title: { en: 'Web Master Ceremony', es: 'Ceremonia Web Master' },
+      subtitle: { en: 'Graduation day — the fleet salutes you', es: 'Día de graduación: la flota te saluda' },
+      chips: [
+        { en: 'HTML mastered', es: 'HTML dominado' },
+        { en: 'CSS mastered', es: 'CSS dominado' },
+        { en: 'JavaScript mastered', es: 'JavaScript dominado' }
+      ] },
+
+    { type: 'steps', dur: 9,
+      frames: [
+        { html: '<div class="gal"><span class="medal">🥇</span><b>HTML Nebula</b><p>skeletons, tags, whole pages</p></div>',
+          css: '.gal{display:inline-block;text-align:center;font-family:sans-serif;background:rgba(255,255,255,.07);border:1px solid rgba(143,211,255,.35);border-radius:16px;padding:22px 34px}.gal .medal{font-size:3em;display:block;margin-bottom:8px}.gal b{color:#8fd3ff;font-size:1.3em}.gal p{color:#cfe8ff;margin:.3em 0 0;font-size:.95em}' },
+        { html: '<div class="gal"><span class="medal">🥈</span><b>CSS Kingdom</b><p>colors, boxes, layouts, magic</p></div>' },
+        { html: '<div class="gal"><span class="medal">🥉</span><b>JavaScript Galaxy</b><p>logic, data, events, promises</p></div>' }
+      ],
+      caption: { en: 'Three galaxies conquered — every medal on this wall is yours.',
+                 es: 'Tres galaxias conquistadas: cada medalla de este muro es tuya.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'HTML, CSS, JS — who makes the page react to clicks?', es: 'HTML, CSS, JS: ¿quién hace que la página reaccione a los clics?' },
+      options: [{ en: 'HTML', es: 'HTML' }, { en: 'CSS', es: 'CSS' }, { en: 'JavaScript', es: 'JavaScript' }],
+      answer: 2,
+      caption: { en: 'HTML structures, CSS styles, JavaScript thinks — the trio is complete.',
+                 es: 'HTML estructura, CSS da estilo, JavaScript piensa: el trío está completo.' } },
+
+    { type: 'split', dur: 8,
+      code: '<h1>Cadet Nova, Web Master</h1>\n<blockquote>Shoot for the stars —\n  then build one.</blockquote>\n<footer>Signed: Cosmo</footer>',
+      result: '<div style="font-family:Georgia,serif;text-align:center"><h1 style="font-size:1.5em;margin:.2em 0">Cadet Nova, Web Master</h1><blockquote style="border-left:3px solid #ffd75e;margin:.6em;padding:.5em;font-style:italic">Shoot for the stars — then build one.</blockquote><footer style="color:#889;font-size:.85em">Signed: Cosmo</footer></div>',
+      caption: { en: 'One last mission: your certificate page, with your own name on it.',
+                 es: 'La última misión: tu página de certificado, con tu propio nombre.' } },
+
+    { type: 'custom', dur: 6,
+      html: { en: '<div class="wall"><span class="medal">🏅</span><span class="medal">⭐</span><span class="medal">🏅</span><p>WEB MASTER — CODEQUEST: WEB ODYSSEY</p></div>',
+              es: '<div class="wall"><span class="medal">🏅</span><span class="medal">⭐</span><span class="medal">🏅</span><p>WEB MASTER — CODEQUEST: WEB ODYSSEY</p></div>' },
+      css: '.wall{text-align:center;font-family:sans-serif}.wall .medal{font-size:3em;margin:0 .35em;display:inline-block}.wall p{color:#8fd3ff;letter-spacing:.14em;font-size:.95em;margin-top:12px}',
+      caption: { en: 'The medal wall gains one more name tonight: yours.',
+                 es: 'El muro de medallas gana un nombre más esta noche: el tuyo.' } },
+
+    { type: 'title', emoji: '🎓', dur: 5,
+      title: { en: 'Your turn, Graduate!', es: '¡Tu turno, Graduado!' },
+      subtitle: { en: 'Claim your certificate: write your name in an h1!', es: '¡Reclama tu certificado: escribe tu nombre en un h1!' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

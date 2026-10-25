@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Math Engine</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Math Engine', es: 'Motor matemático' },
+  scenes: [
+    { type: 'title', emoji: '🧮', dur: 5,
+      title: { en: 'Math Engine', es: 'Motor matemático' },
+      subtitle: { en: 'The operators that power the flight computer', es: 'Los operadores que impulsan la computadora de vuelo' },
+      chips: [{ en: '+', es: '+' }, { en: '-', es: '-' }, { en: '*', es: '*' }, { en: '/', es: '/' }, { en: '%', es: '%' }, { en: '++', es: '++' }] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: 'let area = 4 * 3;' },
+        { t: 'area' }, { t: '12', out: true },
+        { t: '10 % 3' }, { t: '1', out: true }
+      ],
+      caption: { en: 'The star * multiplies. % gives the REMAINDER: 10 / 3 leaves 1 over.',
+                 es: 'La estrella * multiplica. % da el RESIDUO: 10 / 3 deja 1 de sobra.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'What is 10 % 3?', es: '¿Cuánto es 10 % 3?' },
+      options: [{ en: '3', es: '3' }, { en: '1', es: '1' }, { en: '0', es: '0' }],
+      answer: 1,
+      caption: { en: '3 fits three times (9) and 1 is left over — that leftover is %.', es: 'El 3 cabe tres veces (9) y sobra 1: ese sobrante es %.' } },
+
+    { type: 'console', dur: 7,
+      lines: [
+        { t: 'let fuel = 10;' },
+        { t: 'fuel++;' },
+        { t: 'fuel' }, { t: '11', out: true }
+      ],
+      caption: { en: '++ is the shortcut for add one: fuel++ means fuel = fuel + 1.',
+                 es: '++ es el atajo para sumar uno: fuel++ significa fuel = fuel + 1.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Log an area, boost fuel with ++ and catch a remainder in the training deck', es: 'Muestra un área, sube fuel con ++ y atrapa un residuo en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

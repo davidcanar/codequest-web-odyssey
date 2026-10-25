@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Position It!</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Position It!', es: '¡Posiciónalo!' },
+  scenes: [
+    { type: 'title', emoji: '📍', dur: 5,
+      title: { en: 'Position It!', es: '¡Posiciónalo!' },
+      subtitle: { en: 'relative, absolute and fixed', es: 'relative, absolute y fixed' },
+      chips: [{ en: 'relative', es: 'relative' }, { en: 'absolute', es: 'absolute' }, { en: 'fixed', es: 'fixed' }] },
+
+    { type: 'code', dur: 9,
+      code: '.card  { position: relative; }\n.badge { position: absolute;\n         top: 10px; right: 10px; }',
+      caption: { en: 'Make the parent <b>relative</b>, then pin the badge to its corner with <b>absolute</b>.',
+                es: 'Haz el padre <b>relative</b> y luego fija el badge en su esquina con <b>absolute</b>.' },
+      labels: [
+        { token: 'relative', label: { en: 'the anchor parent', es: 'el padre ancla' } },
+        { token: 'absolute', label: { en: 'pinned to the parent', es: 'fijado al padre' } },
+        { token: 'top / right', label: { en: 'corner coordinates', es: 'coordenadas de esquina' } }
+      ] },
+
+    { type: 'split', dur: 8,
+      code: '.banner {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n}',
+      result: '<div style="border:2px solid #ffd75e;background:#101743;color:#ffd75e;padding:8px 14px;border-radius:6px;font-size:.95em">📺 Live from orbit! — stays while you scroll</div>',
+      caption: { en: '<b>fixed</b> ignores scrolling — glued to the screen itself.',
+                 es: '<b>fixed</b> ignora el desplazamiento: pegado a la pantalla misma.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'position: absolute measures against…', es: 'position: absolute se mide contra…' },
+      options: [{ en: 'the whole internet', es: 'toda la internet' }, { en: 'the nearest positioned ancestor', es: 'el ancestro posicionado más cercano' }, { en: 'its own font size', es: 'su propio tamaño de fuente' }],
+      answer: 1,
+      caption: { en: 'No positioned ancestor anywhere? Then the page itself is the anchor.', es: '¿Sin ningún ancestro posicionado? Entonces la página misma es el ancla.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Anchor the card, pin the badge, fix the banner', es: 'Ancla la card, fija el badge y pega el banner' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

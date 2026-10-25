@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Function Factory</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Function Factory', es: 'Fábrica de funciones' },
+  scenes: [
+    { type: 'title', emoji: '⚙️', dur: 5,
+      title: { en: 'Function Factory', es: 'Fábrica de funciones' },
+      subtitle: { en: 'Build a machine once, use it forever', es: 'Construye una máquina una vez, úsala para siempre' },
+      chips: [{ en: 'function', es: 'function' }, { en: 'parameter', es: 'parámetro' }, { en: 'argument', es: 'argumento' }, { en: 'return', es: 'return' }] },
+
+    { type: 'code', dur: 9,
+      code: 'function double(n) {\n  return n * 2;\n}',
+      caption: { en: 'A function is a machine with a name: inputs go in, work happens, a result comes out.',
+                 es: 'Una función es una máquina con nombre: entran datos, ocurre el trabajo y sale un resultado.' },
+      labels: [
+        { token: 'double', label: { en: 'the machine\u0027s name', es: 'el nombre de la máquina' } },
+        { token: 'n', label: { en: 'the parameter — the input slot', es: 'el parámetro: la ranura de entrada' } },
+        { token: 'return n * 2', label: { en: 'the work, and return ships the result out', es: 'el trabajo, y return envía el resultado' } }
+      ] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: 'double(4)' }, { t: '8', out: true },
+        { t: 'double(10)' }, { t: '20', out: true },
+        { t: 'double(double(2))' }, { t: '8', out: true }
+      ],
+      caption: { en: 'Call it with different arguments — even feed one machine into another!',
+                 es: 'Llámala con distintos argumentos, ¡incluso alimenta una máquina con otra!' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'What does return do?', es: '¿Qué hace return?' },
+      options: [{ en: 'Sends the result back to the caller', es: 'Devuelve el resultado a quien llamó' }, { en: 'Prints in the console', es: 'Muestra en la consola' }, { en: 'Deletes the function', es: 'Borra la función' }],
+      answer: 0,
+      caption: { en: 'Without return, the machine computes… and answers silence: undefined.', es: 'Sin return, la máquina calcula… y responde con silencio: undefined.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build double and triple machines in the training deck', es: 'Construye las máquinas double y triple en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

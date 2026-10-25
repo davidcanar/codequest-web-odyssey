@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Style Your Text</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Style Your Text', es: 'Estiliza tu texto' },
+  scenes: [
+    { type: 'title', emoji: '🔤', dur: 5,
+      title: { en: 'Style Your Text', es: 'Estiliza tu texto' },
+      subtitle: { en: 'Fonts, sizes, weight and alignment', es: 'Fuentes, tamaños, grosor y alineación' },
+      chips: [{ en: 'font-family', es: 'font-family' }, { en: 'font-size', es: 'font-size' }, { en: 'font-weight', es: 'font-weight' }, { en: 'text-align', es: 'text-align' }] },
+
+    { type: 'code', dur: 9,
+      code: 'h1 {\n  font-family: Arial, sans-serif;\n  font-size: 40px;\n  font-weight: bold;\n  text-align: center;\n}',
+      caption: { en: 'Four dials for one headline: typeface, size, thickness, alignment.',
+                es: 'Cuatro diales para un encabezado: tipografía, tamaño, grosor y alineación.' },
+      labels: [
+        { token: 'font-family:', label: { en: 'the typeface, with fallbacks', es: 'la tipografía, con respaldos' } },
+        { token: 'font-size:', label: { en: 'how tall the letters are', es: 'qué tan altas son las letras' } },
+        { token: 'font-weight:', label: { en: 'thickness — bold computes to 700', es: 'grosor — bold equivale a 700' } },
+        { token: 'text-align:', label: { en: 'placement on the line', es: 'ubicación en la línea' } }
+      ] },
+
+    { type: 'split', dur: 9,
+      code: '.note {\n  font-family: "Courier New", monospace;\n  font-size: 14px;\n}',
+      result: '<p style="font-family:\'Courier New\',monospace;font-size:14px;margin:.2em">Systems check… all green.</p>',
+      caption: { en: 'Font names with spaces wear quotes. Monospace = robot typewriter.',
+                 es: 'Los nombres de fuente con espacios llevan comillas. Monospace = máquina de escribir robot.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'The browser stores bold as which number?', es: 'El navegador guarda bold como qué número?' },
+      options: [{ en: '400', es: '400' }, { en: '700', es: '700' }, { en: 'bold', es: 'bold' }],
+      answer: 1,
+      caption: { en: 'Normal = 400, bold = 700. Both spellings work.', es: 'Normal = 400, negrita = 700. Ambas escrituras funcionan.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Style the gazette title and the tiny note', es: 'Estiliza el título de la gaceta y la nota pequeña' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

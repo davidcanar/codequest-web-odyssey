@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Speak Semantic</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Speak Semantic', es: 'Habla semántico' },
+  scenes: [
+    { type: 'title', emoji: '🏛️', dur: 5,
+      title: { en: 'Speak Semantic', es: 'Habla semántico' },
+      subtitle: { en: 'Name your regions like a pro', es: 'Nombra tus regiones como profesional' },
+      chips: [{ en: 'header', es: 'header' }, { en: 'nav', es: 'nav' }, { en: 'main', es: 'main' }, { en: 'footer', es: 'footer' }] },
+
+    { type: 'code', dur: 8,
+      code: '<header>…logo…</header>\n<nav>…menu…</nav>\n<main>…content…</main>\n<footer>…credits…</footer>',
+      caption: { en: 'Semantic tags say what each region MEANS.',
+                 es: 'Las etiquetas semánticas dicen lo que CADA región significa.' } },
+
+    { type: 'tree', dur: 7,
+      data: { tag: 'body', kids: [ { tag: 'header' }, { tag: 'nav' }, { tag: 'main' }, { tag: 'footer' } ] },
+      caption: { en: 'A page skeleton every browser understands.',
+                 es: 'Un esqueleto de página que todo navegador entiende.' } },
+
+    { type: 'steps', dur: 8,
+      frames: [
+        { html: '<div style="border:2px dashed #888;border-radius:8px;padding:10px;font:14px sans-serif">&lt;div&gt; — meaning: ???</div>' },
+        { html: '<div style="border:2px solid #3ddc84;border-radius:8px;padding:10px;font:14px sans-serif">&lt;nav&gt; — meaning: the menu!</div>' }
+      ],
+      caption: { en: 'A div says nothing. Semantic tags talk.',
+                 es: 'Un div no dice nada. Las etiquetas semánticas hablan.' } },
+
+    { type: 'quiz', dur: 7,
+      question: { en: 'Which tag holds the UNIQUE content of the page?', es: '¿Qué etiqueta guarda el contenido ÚNICO de la página?' },
+      options: [{ en: '<header>', es: '<header>' }, { en: '<main>', es: '<main>' }, { en: '<footer>', es: '<footer>' }],
+      answer: 1,
+      caption: { en: 'main is the star; header and footer repeat on every page.',
+                 es: 'main es la estrella; header y footer se repiten en cada página.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Rebuild Cosmo HQ with header, nav, main, article and footer', es: 'Reconstruye Cosmo HQ con header, nav, main, article y footer' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Hello, JavaScript!</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Hello, JavaScript!', es: '¡Hola, JavaScript!' },
+  scenes: [
+    { type: 'title', emoji: '🤖', dur: 5,
+      title: { en: 'Hello, JavaScript!', es: '¡Hola, JavaScript!' },
+      subtitle: { en: 'The language that makes pages think', es: 'El lenguaje que hace pensar a las páginas' },
+      chips: [{ en: 'JavaScript', es: 'JavaScript' }, { en: 'console', es: 'console' }, { en: 'console.log', es: 'console.log' }] },
+
+    { type: 'code', dur: 8,
+      code: "console.log('Hello, universe!');",
+      caption: { en: 'console.log prints a message into the console — the pilot\u0027s screen where code speaks.',
+                 es: 'console.log muestra un mensaje en la consola: la pantalla del piloto donde el código habla.' },
+      labels: [
+        { token: 'console.log', label: { en: 'the command that prints', es: 'el comando que imprime' } },
+        { token: "'Hello, universe!'", label: { en: 'a string — text inside quotes', es: 'un string: texto entre comillas' } },
+        { token: ';', label: { en: 'semicolon — end of the instruction', es: 'punto y coma: fin de la instrucción' } }
+      ] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: "console.log('Hello, universe!');" },
+        { t: 'Hello, universe!', out: true },
+        { t: "console.log('Cadet on board!');" },
+        { t: 'Cadet on board!', out: true }
+      ],
+      caption: { en: 'The console answers line by line, exactly in order.', es: 'La consola responde línea por línea, exactamente en orden.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'What does console.log do?', es: '¿Qué hace console.log?' },
+      options: [{ en: 'Prints a message in the console', es: 'Muestra un mensaje en la consola' }, { en: 'Deletes a variable', es: 'Borra una variable' }, { en: 'Draws a picture', es: 'Dibuja una imagen' }],
+      answer: 0,
+      caption: { en: 'console.log is your radio: whatever you pass appears in the console.', es: 'console.log es tu radio: lo que le pases aparece en la consola.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Log two messages in the training deck and watch the console', es: 'Muestra dos mensajes en la cubierta de entrenamiento y mira la consola' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

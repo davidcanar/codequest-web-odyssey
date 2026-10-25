@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Array Cargo Hold</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Array Cargo Hold', es: 'La bodega de arreglos' },
+  scenes: [
+    { type: 'title', emoji: '📦', dur: 5,
+      title: { en: 'Array Cargo Hold', es: 'La bodega de arreglos' },
+      subtitle: { en: 'One crate, many values', es: 'Una caja, muchos valores' },
+      chips: [{ en: 'arrays', es: 'arreglos' }, { en: 'index', es: 'índice' }, { en: 'length', es: 'length' }, { en: 'push', es: 'push' }] },
+
+    { type: 'code', dur: 8,
+      code: "let probes = ['Voyager', 'Cassini', 'Juno'];",
+      caption: { en: 'An array stores a list of values between square brackets, separated by commas.',
+                 es: 'Un arreglo guarda una lista de valores entre corchetes, separados por comas.' },
+      labels: [
+        { token: "let probes =", label: { en: 'a variable holding the array', es: 'una variable que guarda el arreglo' } },
+        { token: "'Voyager'", label: { en: 'item at index 0', es: 'elemento en el índice 0' } },
+        { token: '[ ... ]', label: { en: 'square brackets hold the list', es: 'los corchetes contienen la lista' } }
+      ] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: "let crew = ['Ada', 'Bo', 'Zoe'];" },
+        { t: 'crew[0]' }, { t: '"Ada"', out: true },
+        { t: 'crew.length' }, { t: '3', out: true }
+      ],
+      caption: { en: 'The index starts at 0. length counts the items.', es: 'El índice empieza en 0. length cuenta los elementos.' } },
+
+    { type: 'quiz', dur: 6,
+      question: { en: "crew = ['Ada', 'Bo', 'Zoe']. What is crew[1]?", es: "crew = ['Ada', 'Bo', 'Zoe']. ¿Qué es crew[1]?" },
+      options: [{ en: '"Ada"', es: '"Ada"' }, { en: '"Bo"', es: '"Bo"' }, { en: '3', es: '3' }],
+      answer: 1,
+      caption: { en: 'Arrays count from zero, so index 1 is the SECOND item.', es: 'Los arreglos cuentan desde cero, así que el índice 1 es el SEGUNDO elemento.' } },
+
+    { type: 'code', dur: 8,
+      code: "crew.push('Max');\n// crew is now ['Ada', 'Bo', 'Zoe', 'Max']",
+      caption: { en: 'push adds a new item to the end and returns the new length.',
+                 es: 'push agrega un elemento al final y devuelve la nueva longitud.' },
+      labels: [
+        { token: 'push', label: { en: 'grows the array by one', es: 'hace crecer el arreglo en uno' } }
+      ] },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Build an array, read an item, count and push in the training deck', es: 'Construye un arreglo, lee un elemento, cuenta y agrega en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

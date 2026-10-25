@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>Logic Core</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'Logic Core', es: 'Núcleo lógico' },
+  scenes: [
+    { type: 'title', emoji: '⚖️', dur: 5,
+      title: { en: 'Logic Core', es: 'Núcleo lógico' },
+      subtitle: { en: 'Compare and combine like a flight computer', es: 'Compara y combina como una computadora de vuelo' },
+      chips: [{ en: '===', es: '===' }, { en: '!==', es: '!==' }, { en: '&&', es: '&&' }, { en: '||', es: '||' }, { en: '!', es: '!' }] },
+
+    { type: 'console', dur: 8,
+      lines: [
+        { t: "'5' === 5" }, { t: 'false', out: true },
+        { t: 'true && false' }, { t: 'false', out: true },
+        { t: 'true || false' }, { t: 'true', out: true }
+      ],
+      caption: { en: '=== checks the type too. && wants BOTH true; || is happy with one.',
+                 es: '=== revisa también el tipo. && quiere AMBOS verdaderos; || se conforma con uno.' } },
+
+    { type: 'code', dur: 8,
+      code: "if (fuel > 0 && pilot === 'Nova') {\n  console.log('Board!');\n}",
+      caption: { en: 'Chain questions with &&: the gate opens only when every condition passes.',
+                 es: 'Encadena preguntas con &&: la compuerta se abre solo si todas las condiciones pasan.' },
+      labels: [
+        { token: '===', label: { en: 'exactly equal — type counts', es: 'exactamente iguales: el tipo cuenta' } },
+        { token: '&&', label: { en: 'AND — both sides must be true', es: 'Y: ambos lados deben ser verdaderos' } }
+      ] },
+
+    { type: 'quiz', dur: 6,
+      question: { en: "What is '5' === 5 ?", es: "¿Cuánto es '5' === 5 ?" },
+      options: [{ en: 'true', es: 'true' }, { en: 'false', es: 'false' }, { en: '55', es: '55' }],
+      answer: 1,
+      caption: { en: 'A string is not a number: triple equals says false.', es: 'Un string no es un número: el triple igual dice false.' } },
+
+    { type: 'title', emoji: '🛠️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Wire the launch board with && in the training deck', es: 'Conecta el tablero de lanzamiento con && en la cubierta de entrenamiento' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>

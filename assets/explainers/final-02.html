@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="kit.css">
+<title>BOSS 2: The Quiz Machine</title>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+window.EXPLAINER = {
+  title: { en: 'The Quiz Machine', es: 'La Máquina de Trivia' },
+  scenes: [
+    { type: 'title', emoji: '🧠', dur: 4,
+      title: { en: 'The Quiz Machine', es: 'La Máquina de Trivia' },
+      subtitle: { en: 'BOSS 2: data, logic and events in one build', es: 'JEFE 2: datos, lógica y eventos en una construcción' },
+      chips: [{ en: 'function', es: 'function' }, { en: 'array', es: 'arreglo' }, { en: 'events', es: 'eventos' }] },
+
+    { type: 'code', dur: 8,
+      code: 'function checkAnswer(guess, correct) {\n  return guess === correct;\n}',
+      caption: { en: 'The judge of the quiz: one function, two inputs, one verdict.',
+                 es: 'El juez de la trivia: una función, dos entradas, un veredicto.' },
+      labels: [
+        { token: '(guess, correct)', label: { en: 'two inputs: your answer and the truth', es: 'dos entradas: tu respuesta y la verdad' } },
+        { token: '===', label: { en: 'strict match — no cheating', es: 'coincidencia estricta: sin trampas' } },
+        { token: 'return', label: { en: 'hands back true or false', es: 'entrega true o false' } }
+      ] },
+
+    { type: 'console', dur: 7,
+      lines: [
+        { t: 'checkAnswer("A", "A")' },
+        { t: 'true', out: true },
+        { t: 'checkAnswer("B", "A")' },
+        { t: 'false', out: true }
+      ],
+      caption: { en: 'A match means true; anything else means false. The judge never blinks.',
+                 es: 'Coincidir es true; cualquier otra cosa, false. El juez nunca parpadea.' } },
+
+    { type: 'code', dur: 9,
+      code: 'const questions = [\n  { text: "What paints?", answer: "CSS" },\n  { text: "What builds?", answer: "HTML" }\n];',
+      caption: { en: 'The question fleet: objects inside an array — one card per question.',
+                 es: 'La flota de preguntas: objetos dentro de un arreglo, una tarjeta por pregunta.' },
+      labels: [
+        { token: '[ ... ]', label: { en: 'an array — the question fleet', es: 'un arreglo — la flota de preguntas' } },
+        { token: '{ text, answer }', label: { en: 'one object = one question card', es: 'un objeto = una tarjeta de pregunta' } },
+        { token: 'questions.length', label: { en: 'counts the cards', es: 'cuenta las tarjetas' } }
+      ] },
+
+    { type: 'quiz', dur: 6,
+      question: { en: 'How do you read the first question\'s answer?', es: '¿Cómo lees la respuesta de la primera pregunta?' },
+      options: [{ en: 'questions.answer', es: 'questions.answer' }, { en: 'questions[0].answer', es: 'questions[0].answer' }, { en: 'questions(0)', es: 'questions(0)' }],
+      answer: 1,
+      caption: { en: 'Index first, then the property: questions[0].answer.', es: 'Primero el índice, luego la propiedad: questions[0].answer.' } },
+
+    { type: 'title', emoji: '⚔️', dur: 5,
+      title: { en: 'Your turn, Cadet!', es: '¡Tu turno, Cadete!' },
+      subtitle: { en: 'Wire the buttons and start the quiz — beat the boss!', es: '¡Conecta los botones y arranca la trivia: vence al jefe!' } }
+  ]
+};
+</script>
+<script src="kit.js"></script>
+</body>
+</html>
